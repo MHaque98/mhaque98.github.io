@@ -5,6 +5,12 @@
 }
 html {
   scroll-behavior: smooth;
+}
+html,
+body {
+  width: 100%;
+  margin: 0px;
+  padding: 0px;
   overflow-x: hidden;
 }
 
@@ -14,7 +20,7 @@ html {
   font-family: "MyWebFont";
   src: url("myfont.woff") format("woff"),
     /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
-      url("../Assets/fonts/NorthDjakartaDemo.ttf") format("truetype"); /* Chrome 4+, Firefox 3.5, Opera 10+, Safari 3—5 */
+      url("/Assets/fonts/NorthDjakartaDemo.ttf") format("truetype"); /* Chrome 4+, Firefox 3.5, Opera 10+, Safari 3—5 */
 }
 ::-moz-selection {
   /* Code for Firefox */
@@ -207,7 +213,7 @@ a:hover {
 /*JUMBOTRON*/
 .jumbotron {
   background: linear-gradient(#0000000e, #00000000),
-    url("../Assets/images/jumbotron3.jpg") no-repeat center;
+    url("/Assets/images/jumbotron3.jpg") no-repeat center;
   /*background: url(/Assets/jumbotron3.jpg);*/
   background-attachment: fixed;
   background-position: center;
@@ -269,7 +275,7 @@ a:hover {
 
 /* Facts Section */
 .parralax1 {
-  background: url(../Assets/images/parralax2.jpeg);
+  background: url(/Assets/images/parralax2.jpeg);
   background-size: cover;
   background-attachment: fixed;
   height: 10em;
