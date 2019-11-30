@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Question</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Oswald|ZCOOL+QingKe+HuangYou" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <style>
+body {
+margin-top: 60px;
+font-family: 'Oswald', sans-serif;
+color: white;
+background: url("https://wallpapercave.com/wp/wp2661692.jpg") no-repeat center center fixed; 
+background-size: cover;
+}
+h1 {font-size:50px; font-family: 'Oswald', sans-serif;text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.75);}
+h2 {margin-top: 20px; text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.75);}
+img {
+margin-top: 25px;
+display: block;
+margin-left: auto;
+margin-right: auto;
+width: 40%;
+box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)  ;      
+}
+
+.btn1,.btn2 {
+font-family: 'ZCOOL QingKe HuangYou', cursive;
+color: #ffffff !important;
+font-size: 30px;
+width:150px;
+letter-spacing: 1px;
+background: transparent;
+box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)  ; 
+margin: 10px;
+border: 4px solid #ffffff !important;
+border-radius: 6px;
+display: inline-block;
+}
+.btn1:hover {
+color: #000000 !important;
+background: #00a7ff;
+border-color: #00a7ff !important;
+transition: all 0.4s ease 0s;
+}
+  
+.btn2:hover {
+color: #000000 !important;
+background: #fa1d61;
+border-color: #fa1d61 !important;
+transition: all 0.4s ease 0s;
+}
+ 
+    </style>
+    </head>
+    <body>
+       
+<form id="questions">  
+<div id="ques1">
+<center><h1>QUESTION 1</h1></center>
+<div class="img"><img src="https://i.redd.it/j1dmk743kmk11.jpg"></div>
+<center><h2>Male or Female?</h2></center>  
+<center>
+<label  class="btn1"><input type="radio" name="gender" id="male" value="male" onclick=" show('ques2'); hide('ques1')">Male</label>
+<label  class="btn2"><input type="radio" name="gender" id="female" value="female" onclick=" show('ques2'); hide('ques1')">Female</label>     
+</center>   
+</div>
+
+<div id="ques2" style="display: none;">
+<center><h1>QUESTION 2</h1></center>
+<div class="img"><img src="http://www.wallpaperbetter.com/wallpaper/1001/421/277/space-nebula-blue-and-red-galaxies-2K-wallpaper-middle-size.jpg"></div>
+<center><h2>Favourite Colour?</h2></center>
+<center>
+<label  class="btn1"><input type="radio" name="color" id="blue" value="blue" onclick=" show('ques3'); hide('ques2')">Blue</label>
+<label  class="btn2"><input type="radio" name="color" id="red" value="red" onclick=" show('ques3'); hide('ques2')">Red</label>     
+</center>  
+</div>
+    
+<div id="ques3" style="display: none;">
+<center><h1>QUESTION 3</h1></center>
+<div class="img"><img src="https://i.pinimg.com/originals/1c/db/d2/1cdbd257f7ed3cb4c2d5cc8db7235984.jpg"></div>
+<center><h2>Weapon of Choice?</h2></center>
+<center>
+<label  class="btn1"><input type="radio" name="weapon" id="blade" value="blade" onclick=" show('ques4'); hide('ques3')">Blade</label>
+<label  class="btn2"><input type="radio" name="weapon" id="gun" value="gun" onclick=" show('ques4'); hide('ques3')">Gun</label>
+</center>     
+</div>
+    
+<div id="ques4" style="display: none;">
+<center><h1>QUESTION 4</h1></center>
+<div class="img"><img src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/intermediary/f/534a2855-ecf1-40a0-9462-37c1edef46f5/dbbvh87-6bd10da1-b81c-4768-a403-901cc4554ec5.jpg"></div>
+<center><h2>Favourite Element?</h2></center>
+<center>
+<label  class="btn1"><input type="radio" name="element" id="ice" value="ice" onclick=" show('ques5'); hide('ques4')">Ice</label>
+<label  class="btn2"><input type="radio" name="element" id="fire" value="fire" onclick=" show('ques5'); hide('ques4')">Fire</label>
+</center>    
+</div>
+    
+<div id="ques5" style="display: none;">
+<center><h1>QUESTION 5</h1></center>
+<div class="img"><img src="https://www.wallpaperup.com/uploads/wallpapers/2013/12/26/205239/4e4c9bb331f6aa1fe6b40d8e326e30d4-700.jpg"></div>
+<center><h2>Would You..</h2></center>
+<center>
+<label  class="btn1"><input type="radio" name="morv" id="m" value="mercy" />Show Mercy?</label>
+<label  class="btn2"><input type="radio" name="morv" id="v" value="vengeful" />Be Vengeful?</label>    <center><button type="submit" class="btn btn-dark"value="Submit">Submit</button></center>
+</center>    
+</div> 
+</form> 
+     
+    
+        <script> //FEMALES
+        var fury = "femaleredbladefirevengeful";
+        var fury2 = "femalebluebladefirevengeful";
+        var lara = "femalebluegunicemercy";
+        var lara2 = "femaleredgunicemercy";
+        var aloy = "femalebluebladeicemercy";
+        var mileena = "femalebluebladeicevengeful";
+        var boss = "femaleredgunicevengeful";
+        var boss2 = "femalebluegunicevengeful"
+        var lady = "femalebluegunfirevengeful";
+        var lady2 = "femaleredgunfirevengeful";
+        var apoll = "femalebluebladefirevengeful";
+        var claire = "femaleredgunfiremercy";
+        var ada = "femaleredgunicemercy";
+            //MALES
+        var dante = "maleredgunicemercy";
+        var dante2 = "maleredbladeicemercy";
+        var nero = "malebluegunfirevengeful";
+        var vergil = "malebluebladeicevengeful";
+        var sub = "malebluebladeicemercy";
+        var scorpion = "maleredbladefirevengeful";
+        var doom = "maleredgunfirevengeful";
+        var bigboss = "malebluegunicevengeful";
+        var snake = "malebluegunicemercy";
+        var geralt = "malebluebladefiremercy";
+        var ardyn = "malebluebladefirevengeful";
+        var kratos = "maleredbladeicevengeful"; 
+        var goku = "maleredbladefiremercy";
+        var leon = "malebluegunfiremercy";
+        var jack = "maleredgunicevengeful";
+        var drake = "maleredgunfiremercy";
+            
+        function hide(q1){
+        document.getElementById(q1).style.display = "none";      
+        }
+            
+        function show(q1){
+        document.getElementById(q1).style.display = "block";
+        }
+            
+        document.getElementById("questions").onsubmit=function() {
+        gender = document.querySelector('input[name = "gender"]:checked').value;
+
+        color = document.querySelector('input[name = "color"]:checked').value;
+
+        weapon = document.querySelector('input[name = "weapon"]:checked').value;
+
+        element = document.querySelector('input[name = "element"]:checked').value;
+
+        morv = document.querySelector('input[name = "morv"]:checked').value;
+
+        total= gender + color + weapon + element + morv;
+
+
+        if(total == fury) {
+        window.location.href="option2.html";
+        }
+        else if(total == lara ) {
+        window.location.href="option5.html";
+        }
+        else if(total == boss|| total == boss2) {
+        window.location.href="option16.html";
+        }
+        else if(total == aloy) {
+        window.location.href="option11.html";
+        }
+        else if(total == mileena) {
+        window.location.href="option9.html";
+        }
+        else if(total == lady || total == lady2) {
+        window.location.href="option13.html";
+        }
+        else if(total == apoll) {
+        window.location.href="option17.html";
+        }
+        else if (total == claire) {
+        window.location.href="option20.html";
+        }
+        else if (total == ada) {
+        window.location.href="option21.html";
+        }
+        else if(total == dante || total == dante2) {
+        window.location.href="option1.html";
+        }
+        else    if(total == nero) {
+        window.location.href="option14.html";
+        }
+        else if(total == vergil) {
+        window.location.href="option15.html";
+        }
+        else  if(total == sub) {
+        window.location.href="option10.html";
+        }
+        else  if(total == scorpion) {
+        window.location.href="option12.html";
+        }
+        else if(total == doom) {
+        window.location.href="option7.html";
+        }
+        else if(total == bigboss) {
+        window.location.href="option26.html";
+        }
+        else if(total == snake) {
+        window.location.href="option6.html";
+        }
+        else if(total == geralt) {
+        window.location.href="option8.html";
+        }
+        else if(total == ardyn) {
+        window.location.href="option4.html";
+        }
+        else if(total == kratos) {
+        window.location.href="option3.html";
+        }
+        else if(total == goku) {
+        window.location.href="option19.html";
+        }
+        else    if(total == leon) {
+        window.location.href="option22.html";
+        }
+        else   if(total == jack) {
+        window.location.href="option23.html";
+        }
+        else  if(total == drake) {
+        window.location.href="option24.html";
+        }
+        else {
+        window.location.href="option25.html";
+        }
+        return false; // required to not refresh the page; just leave this here
+        }// end the submit function
+	
+	
+
+        </script>
+    </body>
+</html>

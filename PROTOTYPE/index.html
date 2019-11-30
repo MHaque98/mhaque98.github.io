@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>prototype2</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+      <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"> 
+
+   
+    <!--Custom Css-->
+    <link rel="stylesheet" type="text/css" href="mystyle.css">
+</head>
+
+<body>
+    <div class="container main-body ">
+        <div id="overlayer"></div>
+        <span class="loader">
+            <span class="loader-inner"></span>
+        </span>
+
+        <div id="clockdate">
+            <div class="clockdate-wrapper">
+                <div id="clock"></div>
+                <div id="date"></div>
+                <button type="button" id="show-report" class="btn report-btn btn-outline-light ">Show Report</button>
+                <button type="button" id="back" class="btn report-btn btn-outline-light " style="display: none;">Back</button>
+                <div id="operating-times"></div>
+            </div>
+        </div>
+        <div id="main-page">
+            <select class="form-control mdb-select md-form colorful-select dropdown-primary mx-auto" id="search">
+                <option value="" disabled selected>--Choose Aircraft--</option>
+                <option>DC35</option>
+                <option>AB330</option>
+                <option>LH456</option>
+                <option>AB300</option>
+            </select>
+            <div class="container my-buttons text-center">
+                <button type="button" id="take-off" onclick="takeOff()" class="btn btn-primary b1 glow-on-hover">Take-off</button>
+                <button type="button" id="land" class="btn btn-warning b2 glow-on-hover">Land</button></div>
+            <div class="container text-center" id='alert'></div>
+            <table class="table table-dark table-striped  table-bordered">
+                <thead>
+                    <tr>
+                        <th>Aircraft Type</th>
+                        <th>Duration (inc. runway checks)</th>
+                        <th>Status</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="runway" id="runway0"></td>
+                        <td id="duration0"></td>
+                        <td class="status" id="status0"></td>
+                    </tr>
+                    <tr>
+                        <td class="runway" id="runway1"></td>
+                        <td id="duration1"></td>
+                        <td class="status" id="status1"></td>
+                    </tr>
+                    <tr>
+                        <td class="runway" id="runway2"></td>
+                        <td id="duration2"></td>
+                        <td class="status" id="status2"></td>
+                    </tr>
+                    <tr>
+                        <td class="runway" id="runway3"></td>
+                        <td id="duration3"></td>
+                        <td class="status" id="status3"></td>
+                    </tr>
+                    <tr>
+                        <td class="runway" id="runway4"></td>
+                        <td id="duration4"></td>
+                        <td class="status" id="status4"></td>
+                    </tr>
+
+                </tbody>
+            </table>
+
+            <div class="container runway-display">
+                <div class="row p-3">
+                    <div class="col-sm-4 runway-text">Runway #1</div>
+                    <div class="col-sm-8"><i id='runwayImg0' class="fas  fa-plane"></i><span id="r0">Available</span></div>
+                </div>
+                <div class="row p-3">
+                    <div class="col-sm-4 runway-text">Runway #2</div>
+                    <div class="col-sm-8"><i id='runwayImg1' class="fas fa-plane"></i><span id="r1">Available</span></div>
+                </div>
+                <div class="row p-3">
+                    <div class="col-sm-4 runway-text">Runway #3</div>
+                    <div class="col-sm-8"><i id='runwayImg2' class="fas fa-plane"></i><span id="r2">Available</span></div>
+                </div>
+                <div class="row p-3">
+                    <div class="col-sm-4 runway-text">Runway #4</div>
+                    <div class="col-sm-8"><i id='runwayImg3' class="fas fa-plane"></i><span id="r3">Available</span></div>
+                </div>
+                <div class="row p-3">
+                    <div class="col-sm-4 runway-text">Runway #5</div>
+                    <div class="col-sm-8"><i id='runwayImg4' class="fas fa-plane"></i><span id="r4">Available</span></div>
+                </div>
+            </div>
+        </div>
+        <div id="report-page" style="display: none; padding-top: 11%;">
+            <h1 class="text-center text-white">Report List</h1><br>
+            <table class="table table-dark table-striped" style="height: 500px; font-size: 20px;">
+                <thead>
+                    <tr>
+                        <th>Flight Name</th>
+                        <th>Duration (inc. runway checks)</th>
+                        <th>Time</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td id="flight0"></td>
+                        <td id="d0"></td>
+                        <td id="time0"></td>
+                    </tr>
+                    <tr>
+                        <td id="flight1"></td>
+                        <td id="d1"></td>
+                        <td id="time1"></td>
+                    </tr>
+                    <tr>
+                        <td id="flight2"></td>
+                        <td id="d2"></td>
+                        <td id="time2"></td>
+                    </tr>
+                    <tr>
+                        <td id="flight3"></td>
+                        <td id="d3"></td>
+                        <td id="time3"></td>
+                    </tr>
+                    <tr>
+                        <td id="flight4"></td>
+                        <td id="d4"></td>
+                        <td id="time4"></td>
+                    </tr>
+                    <!-- <tr>
+        <td id="flight5"></td>
+        <td id="d5"></td>
+        <td id="time5"></td>
+      </tr>
+      <tr>
+        <td id="flight6"></td>
+        <td id="d6"></td>
+        <td id="time6"></td>
+      </tr>
+      <tr>
+        <td id="flight7"></td>
+        <td id="d7"></td>
+        <td id="time7"></td>
+      </tr>
+      <tr>
+        <td id="flight8"></td>
+        <td id="d8"></td>
+        <td id="time8"></td>
+      </tr>
+      <tr>
+        <td id="flight9"></td>
+        <td id="d9"></td>
+        <td id="time9"></td>
+      </tr>
+      <tr>
+        <td id="flight10"></td>
+        <td id="d10"></td>
+        <td id="time10"></td>
+      </tr>-->
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <script src="myScript.js"></script>
+</body>
+
+</html>
