@@ -1,331 +1,405 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link
-      rel="stylesheet"
-      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-    />
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
-
-    <title>Portfolio</title>
-
-    <!-- Bootstrap core CSS -->
-    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
-
-    <!-- Custom fonts for this template -->
-    <link
-      href="https://fonts.googleapis.com/css?family=Saira+Extra+Condensed:500,700"
-      rel="stylesheet"
-    />
-    <link
-      href="https://fonts.googleapis.com/css?family=Muli:400,400i,800,800i"
-      rel="stylesheet"
-    />
-    <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" />
-
-    <!-- Custom styles for this template -->
-    <link href="css/resume.css" rel="stylesheet" />
-  </head>
-
-  <body id="page-top">
-    <nav
-      class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top"
-      id="sideNav"
-    >
-      <a class="navbar-brand js-scroll-trigger" href="#page-top">
-        <span class="d-block d-lg-none">Mahmudul Haque</span>
-        <span class="d-none d-lg-block">
-          <img
-            class="img-fluid img-profile rounded-circle mx-auto mb-2"
-            src="img/user.png"
+   <head>
+      <meta charset="utf-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1" />
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" />
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+      <title>Mahmudul Haque</title>
+      <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+      <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+      <script src="https://kit.fontawesome.com/e27a92c82d.js" crossorigin="anonymous"></script>
+      <link href="css/resume.css" rel="stylesheet" />
+   </head>
+   <body id="page-top">
+      <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top" id="sideNav">
+         <a class="navbar-brand" href="#page-top">
+         <span class="d-block d-lg-none">Mahmudul Haque</span>
+         <span class="d-none d-lg-block">
+         <img
+            class="img-fluid img-profile rounded-circle mb-2"
+            src="Assets/images/profile.jpg"
             alt=""
-          />
-        </span>
-      </a>
-      <button
-        class="navbar-toggler"
-        type="button"
-        data-toggle="collapse"
-        data-target="#navbarSupportedContent"
-        aria-controls="navbarSupportedContent"
-        aria-expanded="false"
-        aria-label="Toggle navigation"
-      >
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav">
-          <li class="nav-item">
-            <a class="nav-link js-scroll-trigger" href="#about">About</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link js-scroll-trigger" href="#experience"
-              >Projects</a
-            >
-          </li>
-
-          <!--<li class="nav-item">
-          <a class="nav-link js-scroll-trigger" href="#skills">Skills</a>
-        </li>-->
-        </ul>
+            data-aos="fade-down"
+            />
+         </span>
+         </a>
+         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+         <span class="navbar-toggler-icon"></span>
+         </button>
+         <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav" data-aos="fade-up">
+               <li class="nav-item">
+                  <a class="nav-link " href="#about">About</a>
+               </li>
+               <li class="nav-item">
+                  <a class="nav-link " href="#skills">Skills</a>
+               </li>
+               <li class="nav-item">
+                  <a class="nav-link " href="#projects">Projects</a>
+               </li>
+               <li class="nav-item">
+                  <a class="nav-link " href="#experience">Experience</a>
+               </li>
+               <li class="nav-item">
+                  <a class="nav-link " href="#contact">Contact</a>
+               </li>
+               <li class="nav-item mt-3 mb-3">
+                  <ul class="social-icons list-inline text-light">
+                     <li class="list-inline">
+                        <a
+                           href="https://github.com/MHaque98"
+                           target="_blank"
+                           > 
+                        <i class="fab fa-github"></i>
+                        </a>
+                     </li>
+                     <li class="list-inline">
+                        <a
+                           href="https://www.linkedin.com/in/mahmudul-haque-2377a01a1/"
+                           target="_blank"
+                           > 
+                        <i class="fab fa-linkedin-in"></i>
+                        </a>
+                     </li>
+                  </ul>
+               </li>
+               <li class="nav-item">
+                  <a class="nav-link nav-link2 " href="/MHaqueCV.pdf" target="_blank">Download CV</a
+                     >
+               </li>
+            </ul>
+         </div>
+      </nav>
+      <div class="container-fluid header-bg" id="home">
+         <section class="main-header" data-aos="zoom-in">
+            <h1 class="header-title">Mahmudul Haque</h1>
+            <p class="header-subtitle text-center">Front-End Web Developer</p>
+            <a href="#about" class="scroll-down"></a>
+         </section>
       </div>
-    </nav>
-
-    <div class="container-fluid p-0 back">
-      <section
-        class="resume-section p-3 p-lg-5 d-flex align-items-center"
-        id="about"
-      >
-        <div class="w-100">
-          <h1 class="mb-0">
-            Mahmudul
-            <span class="text-primary">Haque</span>
-          </h1>
-          <div class="subheading mb-5">
-            <!--3542 Berry Street · Cheyenne Wells, CO 80810 · (317) 585-8468 ·-->
-            <a href="mailto:name@email.com">mahmud_haque@hotmail.co.uk</a>
-          </div>
-          <p class="lead mb-5">
-            I am a fairly new in the coding world, developing a passion in this
-            field in 2018. I enjoy designing and developing websites, and also
-            creating dynamic software. <br /><br />
-            I am hungry to expand my knowledge on various programming languages
-            and become the best programmer I can be.
-          </p>
-          <!--  <div class="social-icons">
-          <a href="#">
-            <i class="fab fa-linkedin-in"></i>
-          </a>
-          <a href="#">
-            <i class="fab fa-github"></i>
-          </a>
-          <a href="#">
-            <i class="fab fa-twitter"></i>
-          </a>
-          <a href="#">
-            <i class="fab fa-facebook-f"></i>
-          </a>
-        </div>-->
-        </div>
-      </section>
-
-      <hr class="m-0" />
-
-      <section
-        class="resume-section p-3 p-lg-5 d-flex justify-content-center"
-        id="experience"
-      >
-        <div class="w-100">
-          <h2 class="mb-5">Projects</h2>
-
-          <div class="resume-item mb-5 row">
-            <div class="resume-content col-md-7">
-              <h3 class="mb-0">Save Our Oceans Website</h3>
-              <div class="subheading mb-3">
-                HTML CSS (Bootstrap) &amp; JavaScript (jQuery)
-              </div>
-              <p>
-                So, I decided to test out my skills and create a website from
-                scratch. no templates. I wanted to see how well I could create a
-                site right from the start, and I'm pretty happy with the way it
-                turned out, definitely an improvement from my first site I
-                created from scratch (which you can find below) plus it's
-                <b>Mobile Responsive</b>. When I was deciding the topic of the
-                site, climate change came to my mind, as it's currently a hot
-                topic and something evryone should be concerned with. I decided
-                the website was going to about the environmental impact on
-                oceans.
-              </p>
-              <a href="SaveTheOceanUPDATE/index.html" target="_blank">
-                <button
-                  type="button"
-                  id="show-report"
-                  class="btn report-btn btn-outline-primary "
-                >
-                  View
-                </button></a
-              >
-            </div>
-            <div class="resume-date col-md-5">
-              <img src="img/saveocean.PNG" style="width: 100%;" />
-            </div>
-          </div>
-
-          <div class="resume-item mb-5 row">
-            <div class="resume-content col-md-7">
-              <h3 class="mb-0">Airport Traffic Management System</h3>
-              <div class="subheading mb-3">HTML CSS &amp; JavaScript</div>
-              <p>
-                I have created a prototype that calculates the capacity of the
-                airport traffic based upon the manual input of data. It was a
-                challenging task but one that I benefitted greatly as it
-                increased my programming skills, especially in the JavaScript
-                department.
-              </p>
-              <a href="PROTOTYPE/index.html" target="_blank">
-                <button
-                  type="button"
-                  id="show-report"
-                  class="btn report-btn btn-outline-primary "
-                >
-                  View
-                </button></a
-              >
-            </div>
-            <div class="resume-date col-md-5">
-              <img src="img/atms.PNG" style="width: 100%;" />
-            </div>
-          </div>
-
-          <div class="resume-item mb-5 row">
-            <div class="resume-content col-md-7">
-              <h3 class="mb-0">Questionaire</h3>
-              <div class="subheading mb-3">HTML CSS &amp; JavaScript</div>
-              <p>
-                My first JavaScript project, using mainly conditional
-                statements. The code itself was a bit amateurish, but I was
-                happy with the overall design of the questionaire.
-              </p>
-              <a href="questionaire/surveyhome.html" target="_blank">
-                <button
-                  type="button"
-                  id="show-report"
-                  class="btn report-btn btn-outline-primary "
-                >
-                  View
-                </button></a
-              >
-            </div>
-            <div class="resume-date col-md-5">
-              <img src="img/question.PNG" style="width: 100%;" />
-            </div>
-          </div>
-
-          <div class="resume-item mb-5 row">
-            <div class="resume-content col-md-7">
-              <h3 class="mb-0">Dessert Shop Website</h3>
-              <div class="subheading mb-3">HTML CSS &amp; Bootstrap</div>
-              <p>
-                This is the first website I made during my spare time. I was
-                learning the bootstrap framework and I wanted to apply what I
-                learned. Needless to say, bootstrap is a very helpful framework.
-              </p>
-              <a href="dessertsite/dessertTemplate.html" target="_blank">
-                <button
-                  type="button"
-                  id="show-report"
-                  class="btn report-btn btn-outline-primary "
-                >
-                  View
-                </button></a
-              >
-            </div>
-            <div class="resume-date col-md-5">
-              <img src="img/halwa.PNG" style="width: 100%;" />
-            </div>
-          </div>
-
-          <div class="resume-item mb-5 row">
-            <div class="resume-content col-md-7">
-              <h3 class="mb-0">Restaurant Website Template</h3>
-              <div class="subheading mb-3">HTML &amp; CSS</div>
-              <p>
-                This is a website template I created for a restaurant using a
-                Bootstrap template. This was done to demonstrate my CSS & my
-                designing skills.
-              </p>
-              <a href="ArtePizzaMahmud/index.html" target="_blank">
-                <button
-                  type="button"
-                  id="show-report"
-                  class="btn report-btn btn-outline-primary "
-                >
-                  View
-                </button></a
-              >
-            </div>
-            <div class="resume-date col-md-5">
-              <img src="img/arte.PNG" style="width: 100%;" />
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <hr class="m-0" />
-
-      <!-- <section class="resume-section p-3 p-lg-5 d-flex align-items-center" id="skills">
-      <div class="w-100">
-        <h2 class="mb-5">Skills</h2>
-
-        <div class="subheading mb-3">Programming Languages &amp; Tools</div>
-        <ul class="list-inline dev-icons">
-          <li class="list-inline-item">
-            <i class="fab fa-html5"></i>
-          </li>
-          <li class="list-inline-item">
-            <i class="fab fa-css3-alt"></i>
-          </li>
-          <li class="list-inline-item">
-            <i class="fab fa-js-square"></i>
-          </li>
-          <li class="list-inline-item">
-            <i class="fab fa-angular"></i>
-          </li>
-          <li class="list-inline-item">
-            <i class="fab fa-react"></i>
-          </li>
-          <li class="list-inline-item">
-            <i class="fab fa-node-js"></i>
-          </li>
-          <li class="list-inline-item">
-            <i class="fab fa-sass"></i>
-          </li>
-          <li class="list-inline-item">
-            <i class="fab fa-less"></i>
-          </li>
-          <li class="list-inline-item">
-            <i class="fab fa-wordpress"></i>
-          </li>
-          <li class="list-inline-item">
-            <i class="fab fa-gulp"></i>
-          </li>
-          <li class="list-inline-item">
-            <i class="fab fa-grunt"></i>
-          </li>
-          <li class="list-inline-item">
-            <i class="fab fa-npm"></i>
-          </li>
-        </ul>
-
-        <div class="subheading mb-3">Workflow</div>
-        <ul class="fa-ul mb-0">
-          <li>
-            <i class="fa-li fa fa-check"></i>
-            Mobile-First, Responsive Design</li>
-          <li>
-            <i class="fa-li fa fa-check"></i>
-            Cross Browser Testing &amp; Debugging</li>
-          <li>
-            <i class="fa-li fa fa-check"></i>
-            Cross Functional Teams</li>
-          <li>
-            <i class="fa-li fa fa-check"></i>
-            Agile Development &amp; Scrum</li>
-        </ul>
+      <div class=" about-section" id="about">
+         <div class="about-text container" data-aos="fade-down">
+            <h1>About Me</h1>
+            <p>
+               Welcome to my Portfolio Site! My name is <b>Mahmudul Haque</b> (call me <b>Mahmud!</b>), and I am a
+               <b>young, enthusiastic web developer</b> who started my journey at the end of 2018, and have enjoyed programming every step of the way.
+            </p>
+            <p>
+               I particularly enjoy delevoping <b>Front-End designs</b>, as I believe I have somewhat of an <b>artistic flair</b> to my side. I love
+               <b>creating stuff</b> and witnessing my code take shape upon my very eyes.
+            </p>
+            <p>
+               You want to know <b>more</b> about me? Well I'm generally a friendly person who gets along with anyone. I am an <b>avid gamer</b> who enjoys a wide range of video games, and i'm also a big fan of
+               <b>football</b>, whether playing the game, or watching it.
+            </p>
+         </div>
+         <div class="icon mx-auto" data-aos="zoom-in">
+            <i class="fab fa-connectdevelop"></i>
+         </div>
       </div>
-    </section>
-
-    <hr class="m-0">-->
-    </div>
-
-    <!-- Plugin JavaScript -->
-    <script src="jquery-easing/jquery.easing.min.js"></script>
-
-    <!-- Custom scripts for this template -->
-    <script src="js/resume.js"></script>
-  </body>
+      <div class="skills-section container-fluid" id="skills">
+         <div class="row container-fluid">
+            <div class="col-lg-6">
+               <div class="skills-text container" data-aos="fade-up">
+                  <h1 class="mx-auto">My Skills</h1>
+               </div>
+            </div>
+            <div class="col-lg-6 text-center">
+               <ul class="list-inline dev-icons" data-aos="fade-left">
+                  <li class="list-inline-item">
+                     <i class="fab fa-html5"></i>
+                  </li>
+                  <li class="list-inline-item">
+                     <i class="fab fa-css3-alt"></i>
+                  </li>
+                  <li class="list-inline-item">
+                     <i class="fab fa-js-square"></i>
+                  </li>
+                  <li class="list-inline-item">
+                     <i class="fab fa-react"></i>
+                  </li>
+                  <li class="list-inline-item">
+                     <i class="fab fa-node-js"></i>
+                  </li>
+                  <li class="list-inline-item">
+                     <i class="fab fa-sass"></i>
+                  </li>
+                  <li class="list-inline-item">
+                     <i class="fab fa-git"></i>
+                  </li>
+               </ul>
+            </div>
+         </div>
+      </div>
+      <div class="projects-section container-fluid" id="projects">
+         <div class="projects " data-aos="zoom-in">
+            <h1>My Projects</h1>
+            <div class="project-filter-buttons">
+               <button data-filter="" class="filter-button clear-button active-filter">
+               All
+               </button>
+               <button data-filter="featured" class="filter-button ">
+               My Featured
+               </button>
+               <button data-filter="others" class="filter-button">
+               Others
+               </button>
+            </div>
+            <div class="projects-grid row">
+               <div class="col-md-4 featured">
+                  <div class="project featured">
+                     <h2 class="project-title">Ultimate Gamer Quiz</h2>
+                     <div class="project-img pro1"></div>
+                     <button class="project-more" data-toggle="modal" data-target="#project1">
+                     View More
+                     </button>
+                     <div class="badges">
+                        <span>Bootstrap</span>
+                        <span>JS</span>
+                     </div>
+                  </div>
+               </div>
+               <div class="col-md-4 featured">
+                  <div class="project featured">
+                     <h2 class="project-title">Income Tax Calculator</h2>
+                     <div class="project-img pro2"></div>
+                     <button class="project-more" data-toggle="modal" data-target="#project2">
+                     View More
+                     </button>
+                     <div class="badges">
+                        <span>Bootstrap</span>
+                        <span>JS</span>
+                     </div>
+                  </div>
+               </div>
+               <div class="col-md-4 others">
+                  <div class="project ">
+                     <h2 class="project-title">Google Clone</h2>
+                     <div class="project-img pro6"></div>
+                     <button class="project-more" data-toggle="modal" data-target="#project3">
+                     View More
+                     </button>
+                     <div class="badges">
+                        <span>HTML/CSS</span>
+                        <span>jQuery</span>
+                     </div>
+                  </div>
+               </div>
+               <div class="col-md-4 others">
+                  <div class="project">
+                     <h2 class="project-title">Air Traffic Simulator</h2>
+                     <div class="project-img pro4"></div>
+                     <button class="project-more" data-toggle="modal" data-target="#project4">
+                     View More
+                     </button>
+                     <div class="badges">
+                        <span>JS</span>
+                     </div>
+                  </div>
+               </div>
+               <div class="col-md-4 others">
+                  <div class="project">
+                     <h2 class="project-title">React Meme Generator</h2>
+                     <div class="project-img pro5"></div>
+                     <button class="project-more" data-toggle="modal" data-target="#project5">
+                     View More
+                     </button>
+                     <div class="badges">
+                        <span>react</span>
+                     </div>
+                  </div>
+               </div>
+               <div class="col-md-4 featured">
+                  <div class="project featured">
+                     <h2 class="project-title">Save Our Oceans Site</h2>
+                     <div class="project-img pro3"></div>
+                     <button class="project-more" data-toggle="modal" data-target="#project6">
+                     View More
+                     </button>
+                     <div class="badges">
+                        <span>Bootstrap</span>
+                        <!-- <span>JS</span> -->
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+         <!-- MODALS -->
+         <div class="modal fade" id="project1" tabindex="-1" role="dialog" aria-labelledby="project1CenterTitle" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+               <div class="modal-content">
+                  <div class="modal-body">
+                     <div class="project-img pro1">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                        </button>
+                     </div>
+                     <div class="container project-description p-4">
+                        <h3>Video Game Quiz</h3>
+                        A JS quiz I created testing your video game knowledge.
+                        <b class="text-warning">WARNING</b> Sound will be played so lower volume if needed.
+                     </div>
+                  </div>
+                  <div class="modal-footer">
+                     <a href="/projects/VideoGamesQuiz/index.html" target="_blank">
+                     <button class="button-modal">
+                     View project
+                     </button>
+                     </a>
+                     <button class="button-modal">
+                     View Source Code
+                     </button>
+                  </div>
+               </div>
+            </div>
+         </div>
+         <div class="modal fade" id="project2" tabindex="-1" role="dialog" aria-labelledby="project1CenterTitle" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+               <div class="modal-content">
+                  <div class="modal-body">
+                     <div class="project-img pro2">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                        </button>
+                     </div>
+                     <div class="container project-description p-4">
+                        <h3>Income Tax Calculator</h3>
+                        A Calculator which determines how much Income Taxt &amp; National Insurance you should pay based on your yearly income.
+                     </div>
+                  </div>
+                  <div class="modal-footer">
+                     <a href="/projects/tax-calculator/index.html" target="_blank">
+                     <button class="button-modal">
+                     View project
+                     </button>
+                     </a>
+                     <button class="button-modal">
+                     View Source Code
+                     </button>
+                     </a>
+                  </div>
+               </div>
+            </div>
+         </div>
+         <div class="modal fade" id="project3" tabindex="-1" role="dialog" aria-labelledby="project1CenterTitle" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+               <div class="modal-content">
+                  <div class="modal-body">
+                     <div class="project-img pro6">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                        </button>
+                     </div>
+                     <div class="container project-description p-4">
+                        <h3>Google Clone</h3>
+                        A mock-up Google Search Engine with some extra features. I also practiced using the JS local storage for this project so it will remember your preferences whenever you refresh or come back to the project again.
+                     </div>
+                  </div>
+                  <div class="modal-footer">
+                     <a class="mx-auto" href="VideoGamesQuiz/index.html" target="_blank">
+                     <a href="/projects/google-clone/index.html" target="_blank">
+                     <button class="button-modal">
+                     View project
+                     </button>
+                     </a>
+                     <button class="button-modal">
+                     View Source Code
+                     </button>
+                     </a>
+                  </div>
+               </div>
+            </div>
+         </div>
+         <div class="modal fade" id="project4" tabindex="-1" role="dialog" aria-labelledby="project1CenterTitle" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+               <div class="modal-content">
+                  <div class="modal-body">
+                     <div class="project-img pro4">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                        </button>
+                     </div>
+                     <div class="container project-description p-4">
+                        <h3>Air Traffic Simulator</h3>
+                        Air Traffic Simulator to dictate whether a runway is available to use for any given airline. This project was tough at the time but it helped me improve in JavaScript.
+                     </div>
+                  </div>
+                  <div class="modal-footer">
+                     <a href="/projects/PROTOTYPE/index.html" target="_blank">
+                     <button class="button-modal">
+                     View project
+                     </button>
+                     </a>
+                     <button class="button-modal">
+                     View Source Code
+                     </button>
+                  </div>
+               </div>
+            </div>
+         </div>
+         <div class="modal fade" id="project5" tabindex="-1" role="dialog" aria-labelledby="project1CenterTitle" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+               <div class="modal-content">
+                  <div class="modal-body">
+                     <div class="project-img pro5">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                        </button>
+                     </div>
+                     <div class="container project-description p-4">
+                        <h3>React Meme Generator</h3>
+                        My first React mini-project. User can add text to suit the given meme. I am continuously learning React to get better at it.
+                     </div>
+                  </div>
+                  <div class="modal-footer">
+                     <!-- <a href="/projects/" target="_blank">
+                        <button class="button-modal">
+                        
+                              View project
+                          </button>
+                        </a> -->
+                     <a href="https://github.com/MHaque98/React-meme-generator" target="_blank">
+                     <button class="button-modal">
+                     View Source Code
+                     </button>
+                     </a>
+                  </div>
+               </div>
+            </div>
+         </div>
+         <div class="modal fade" id="project6" tabindex="-1" role="dialog" aria-labelledby="project1CenterTitle" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+               <div class="modal-content">
+                  <div class="modal-body">
+                     <div class="project-img pro3">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                        </button>
+                     </div>
+                     <div class="container project-description p-4">
+                        <h3>Save The Ocean Website</h3>
+                        A Website created to raise awareness on what is happening to our Oceans.
+                     </div>
+                  </div>
+                  <div class="modal-footer">
+                     <a href="/projects/SaveTheOceanUPDATE/index.html" target="_blank">
+                     <button class="button-modal">
+                     View project
+                     </button>
+                     </a>
+                     <button class="button-modal">
+                     View Source Code
+                     </button>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+      <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+      <script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.min.js"></script>
+      <script src="js/resume.js"></script>
+   </body>
 </html>

@@ -1,101 +1,73 @@
-/*!
- * Start Bootstrap - Resume v5.0.7 (https://startbootstrap.com/template-overviews/resume)
- * Copyright 2013-2019 Start Bootstrap
- * Licensed under MIT (https://github.com/BlackrockDigital/startbootstrap-resume/blob/master/LICENSE)
- */
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css?family=Yantramanav&display=swap");
+*,
+*:before,
+*:after {
+  -webkit-box-sizing: inherit;
+          box-sizing: inherit;
+}
+
+html {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  scroll-behavior: smooth;
+}
 
 body {
-  font-family: 'Muli', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
   padding-top: 54px;
- background-color: #ffffff;
-background-image: url("https://www.transparenttextures.com/patterns/mirrored-squares.png");
-/* This is mostly intended for prototyping; please download the pattern and re-host for production environments. Thank you! */
+  overflow-x: hidden;
+  margin: 0;
+  padding: 0;
+  font-family: "Yantramanav", sans-serif;
+  background-color: #ffffff;
+  background-image: url("https://www.transparenttextures.com/patterns/mirrored-squares.png");
+}
+
+a,
+a:hover,
+a:visited {
+  text-decoration: none !important;
+  color: inherit;
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #ffffff;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #131313;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
 }
 
 @media (min-width: 992px) {
   body {
     padding-top: 0;
     padding-left: 17rem;
-      
+    overflow-x: hidden;
   }
 }
-.back{
 
-}
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  font-family: 'Saira Extra Condensed', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
-  font-weight: 700;
-  text-transform: uppercase;
-  color: #151515;
-}
-
-h1 {
-  font-size: 6rem;
-  line-height: 5.5rem;
-}
-
-h2 {
-  font-size: 3.5rem;
-}
-
-h3 {
-  font-size: 2rem;
-}
-
-p.lead {
-  font-size: 1.15rem;
-  font-weight: 500;
-}
-
-.subheading {
-  text-transform: uppercase;
-  font-weight: 500;
-  font-family: 'Saira Extra Condensed', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
-  font-size: 1.5rem;
-}
-
-.social-icons a {
-  display: inline-block;
-  height: 3.5rem;
-  width: 3.5rem;
-  background-color: #495057;
-  color: #fff !important;
-  border-radius: 100%;
-  text-align: center;
-  font-size: 1.5rem;
-  line-height: 3.5rem;
-  margin-right: 1rem;
-}
-
-.social-icons a:last-child {
-  margin-right: 0;
-}
-
-.social-icons a:hover {
-  background-color: #1094d9;
-}
-
-.dev-icons {
-  font-size: 3rem;
-}
-
-.dev-icons .list-inline-item i:hover {
-  color: #1094d9;
-}
-
+/*NAV*/
 #sideNav .navbar-nav .nav-item .nav-link {
-  font-weight: 900;
+  font-weight: 500;
+  color: whitesmoke;
   letter-spacing: 0.05rem;
   text-transform: uppercase;
 }
 
 #sideNav .navbar-toggler:focus {
-  outline-color: #60a7ef;
+  outline-color: #ffffff;
 }
 
 @media (min-width: 992px) {
@@ -124,7 +96,7 @@ p.lead {
   #sideNav .navbar-brand .img-profile {
     max-width: 10rem;
     max-height: 10rem;
-    border: 0.5rem solid rgba(255, 255, 255, 0.2);
+    border: 0.5rem solid rgba(194, 241, 255, 0.274);
   }
   #sideNav .navbar-collapse {
     display: -webkit-box;
@@ -151,49 +123,502 @@ p.lead {
   }
   #sideNav .navbar-collapse .navbar-nav .nav-item .nav-link {
     display: block;
+    border: whitesmoke 2px solid;
+    margin: 0.5em;
+    -webkit-transition: all 0.3s;
+    transition: all 0.3s;
+  }
+  #sideNav .navbar-collapse .navbar-nav .nav-item .nav-link:hover {
+    color: #131313;
+    background-color: whitesmoke;
+    font-weight: 600;
+  }
+  .nav-link2 {
+    background: whitesmoke;
+    color: black !important;
+    font-weight: bold !important;
+  }
+  .nav-link2:hover {
+    -webkit-transform: scale(1.05);
+            transform: scale(1.05);
   }
 }
 
-section.resume-section {
-  padding-top: 5rem !important;
-  padding-bottom: 5rem !important;
-  max-width: 75rem;
+.social-icons li {
+  margin: 0.5em;
+  display: inline;
 }
 
-section.resume-section .resume-item .resume-date {
-  min-width: none;
+.social-icons li i {
+  font-size: 2em;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
 }
 
-@media (min-width: 768px) {
-  section.resume-section {
-    min-height: 100vh;
-  }
-  section.resume-section .resume-item .resume-date {
-    min-width: 18rem;
-  }
-}
-
-@media (min-width: 992px) {
-  section.resume-section {
-    padding-top: 3rem !important;
-    padding-bottom: 3rem !important;
-  }
+.social-icons li i:hover {
+  -webkit-transform: scale(1.3);
+          transform: scale(1.3);
 }
 
 .bg-primary {
-  background-color: #001733 !important;
-background-image: url("https://www.transparenttextures.com/patterns/moulin.png");
-/* This is mostly intended for prototyping; please download the pattern and re-host for production environments. Thank you! */
+  background-color: #131313 !important;
+  background-image: url("https://www.transparenttextures.com/patterns/otis-redding.png");
+  -webkit-box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+          box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
 }
 
-.text-primary {
-  color: #1094d9 !important;
+/* HEADER */
+.header-bg {
+  height: 100vh;
+  background: -webkit-gradient(linear, left top, left bottom, from(#0000002d), to(#03030321)), url("../Assets/images/header-bg8.jpg");
+  background: linear-gradient(#0000002d, #03030321), url("../Assets/images/header-bg8.jpg");
+  background-position: center;
+  background-size: cover;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: whitesmoke;
 }
 
-a {
-  color: #1094d9;
+.header-bg .header-title {
+  font-size: 6rem;
+  letter-spacing: 2px;
+  text-transform: uppercase;
 }
 
-a:hover, a:focus, a:active {
-  color: #1094d9;
+.header-bg .header-subtitle {
+  font-size: 1.4em;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  border-top: whitesmoke 2px solid;
+  border-bottom: whitesmoke 2px solid;
 }
+
+@media (max-width: 1024px) {
+  .header-bg .header-title {
+    font-size: 3em;
+  }
+  .header-bg .header-subtitle {
+    font-size: 1em;
+  }
+}
+
+@media (max-width: 48em) {
+  .header-bg .header-title {
+    font-size: 2em;
+  }
+  .header-bg .header-subtitle {
+    font-size: 1em;
+  }
+}
+
+.scroll-down {
+  opacity: 1;
+  -webkit-transition: all 0.5s ease-in 3s;
+  transition: all 0.5s ease-in 3s;
+  margin: auto;
+  display: block;
+  width: 32px;
+  height: 32px;
+  border: 2px solid #fff;
+  border-radius: 50%;
+  background-size: 14px auto;
+  z-index: 2;
+  -webkit-animation: bounce 2s infinite 2s;
+          animation: bounce 2s infinite 2s;
+  -webkit-transition: all 0.2s ease-in;
+  transition: all 0.2s ease-in;
+  -webkit-transform: scale(1);
+          transform: scale(1);
+}
+
+.scroll-down:hover {
+  background-color: rgba(245, 245, 245, 0.274);
+}
+
+.scroll-down:before {
+  position: absolute;
+  top: calc(50% - 8px);
+  left: calc(50% - 6px);
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+  display: block;
+  width: 12px;
+  height: 12px;
+  content: "";
+  border: 2px solid white;
+  border-width: 0px 0 2px 2px;
+}
+
+@-webkit-keyframes bounce {
+  0%,
+  100%,
+  20%,
+  50%,
+  80% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+  40% {
+    -webkit-transform: translateY(-10px);
+            transform: translateY(-10px);
+  }
+  60% {
+    -webkit-transform: translateY(-5px);
+            transform: translateY(-5px);
+  }
+}
+
+@keyframes bounce {
+  0%,
+  100%,
+  20%,
+  50%,
+  80% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+  40% {
+    -webkit-transform: translateY(-10px);
+            transform: translateY(-10px);
+  }
+  60% {
+    -webkit-transform: translateY(-5px);
+            transform: translateY(-5px);
+  }
+}
+
+/* ABOUT SECTIOM*/
+.about-section {
+  height: 50vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 10px;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.about-section h1 {
+  font-size: 3em;
+  font-weight: bold;
+  background-color: black;
+  color: whitesmoke;
+  display: table;
+  padding: 5px 20px;
+  -webkit-box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+          box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+}
+
+.about-section p {
+  font-size: 1.2em;
+}
+
+.about-section i {
+  font-size: 10em;
+  -webkit-animation: spin 10s linear infinite;
+          animation: spin 10s linear infinite;
+}
+
+@media (max-width: 1655px) {
+  .about-section i {
+    display: none;
+  }
+}
+
+@media (max-width: 48em) {
+  .about-section {
+    padding: 30px;
+    height: 90vh;
+  }
+  .about-section h1 {
+    font-size: 2.5em;
+    font-weight: bold;
+    margin-bottom: 1em;
+  }
+  .about-section p {
+    font-size: 1em;
+  }
+  .about-section i {
+    font-size: 6em;
+    padding: 0px;
+  }
+}
+
+@-webkit-keyframes spin {
+  from {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+@keyframes spin {
+  from {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+/*Skills Section*/
+.skills-section {
+  height: 50vh;
+  background-color: #131313;
+  background-image: url("https://www.transparenttextures.com/patterns/dark-mosaic.png");
+  background-image: url("https://www.transparenttextures.com/patterns/dark-mosaic.png"), linear-gradient(45deg, #131313 50%, white 50%);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.skills-section .row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.skills-section h1 {
+  font-size: 3.7em;
+  font-weight: bold;
+  background-color: whitesmoke;
+  color: black;
+  display: table;
+  padding: 5px 20px;
+  -webkit-box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+          box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+}
+
+.skills-section .dev-icons {
+  font-size: 4rem;
+}
+
+.skills-section .dev-icons li {
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+.skills-section .dev-icons li:hover {
+  -webkit-transform: scale(1.3);
+          transform: scale(1.3);
+}
+
+@media (max-width: 48em) {
+  .skills-section {
+    background-color: #131313;
+    background-image: url("https://www.transparenttextures.com/patterns/dark-mosaic.png");
+  }
+  .skills-section h1 {
+    margin: auto;
+    font-size: 2.5em;
+    margin-bottom: 1em;
+  }
+  .skills-section .dev-icons {
+    font-size: 2.5rem;
+    color: whitesmoke;
+  }
+}
+
+.projects-section .projects {
+  padding: 1em;
+  margin: auto;
+  width: 80%;
+}
+
+.projects-section .projects h1 {
+  font-size: 3em;
+  font-weight: bold;
+  background-color: black;
+  color: whitesmoke;
+  margin: auto;
+  margin-top: 0.9em;
+  margin-bottom: 0.8em;
+  display: table;
+  padding: 5px 20px;
+  -webkit-box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+          box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+}
+
+.project-more {
+  padding: 5px 10x;
+  font-weight: bold;
+  background-color: black;
+  color: whitesmoke;
+  border: none;
+  display: block;
+  margin: auto;
+  margin-top: 5px;
+  -webkit-transition: all 0.4s;
+  transition: all 0.4s;
+}
+
+.project-more:hover {
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
+}
+
+.project-filter-buttons {
+  text-align: center;
+}
+
+.project-filter-buttons button {
+  margin: 5px;
+  width: 100px;
+  -webkit-box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+          box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+  border: none;
+  font-size: 1em;
+  font-weight: bold;
+  background-color: black;
+  color: whitesmoke;
+  cursor: pointer;
+  outline: none;
+}
+
+.project-filter-buttons button.active-filter {
+  background: whitesmoke;
+  color: black;
+}
+
+.projects-grid {
+  margin-top: 20px;
+}
+
+.project {
+  margin: 10px;
+  margin-bottom: 1em;
+}
+
+.project-image {
+  width: 100%;
+}
+
+.project-img {
+  height: 11em;
+}
+
+.pro1 {
+  background: url("../Assets/images/gamequiz.PNG") center center/cover;
+}
+
+.pro2 {
+  background: url("../Assets/images/tax-calculator.PNG") center center/cover;
+}
+
+.pro3 {
+  background: url("../Assets/images/saveocean.PNG") center center/cover;
+}
+
+.pro4 {
+  background: url("../Assets/images/plane.PNG") center center/cover;
+}
+
+.pro5 {
+  background: url("../Assets/images/memegenerator.PNG") center center/cover;
+}
+
+.pro6 {
+  background: url("../Assets/images/googleclone.PNG") center center/cover;
+}
+
+.project-title {
+  text-align: center;
+  font-size: 1.5em;
+}
+
+.project > .badges {
+  margin: 5px;
+  margin-top: 15px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.project > .badges > span {
+  border: 1px solid grey;
+  border-radius: 2px;
+  padding: 5px 10px 5px 20px;
+  position: relative;
+  margin: 5px;
+}
+
+.project > .badges > span:before {
+  position: absolute;
+  content: "°";
+  font-size: 30px;
+  top: 4px;
+  left: 5px;
+}
+
+.modal-content {
+  border-radius: 0px;
+  border: white 2px solid;
+  background-color: #131313ee;
+  background-image: url("https://www.transparenttextures.com/patterns/dark-mosaic.png");
+  color: whitesmoke;
+}
+
+.modal-content h3 {
+  font-weight: bold;
+  display: table;
+  background-color: whitesmoke;
+  color: #131313;
+  padding: 5px;
+}
+
+.modal-content span {
+  color: white;
+  font-size: 40px;
+}
+
+.modal-content .modal-footer {
+  border-top: white 2px solid;
+}
+
+.modal-content .button-modal {
+  background-color: transparent;
+  color: whitesmoke;
+  border: 2px whitesmoke solid;
+  font-weight: bold;
+  padding: 5px 10px;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+.modal-content .button-modal:hover {
+  background-color: whitesmoke;
+  color: #131313;
+}
+/*# sourceMappingURL=resume.css.map */

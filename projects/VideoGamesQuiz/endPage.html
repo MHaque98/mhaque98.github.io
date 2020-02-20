@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Final Score</title>
+    <link rel="stylesheet" href="Assets/bootstrap/css/bootstrap.min.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.js"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <link rel="stylesheet" href="css/main.css" />
+  </head>
+  <body>
+    <div class="end-screen" id="end-screen" data-aos="fade-in">
+      <div
+        id="end"
+        class=""
+        data-aos="fade-right"
+        data-aos-easing="ease-in-out"
+      >
+        <div>
+          <h3 class="title text-light mb-4">You Scored</h3>
+          <h1 class="title text-light mb-4" id="finalScore"></h1>
+          <h3 class="title text-light mb-5">Out Of Ten</h3>
+
+          <a class="btn btn-col mx-auto mb-4" href="gamePage.html"
+            ><span>
+              Start Again
+            </span></a
+          >
+
+          <a class="btn btn-col mx-auto mb-4" id="save" href=""
+            ><span>
+              Save Score
+            </span></a
+          >
+
+          <a class="btn btn-col mx-auto" href="index.html"
+            ><span>
+              Home Page
+            </span></a
+          >
+        </div>
+      </div>
+    </div>
+    <audio src="Assets/audio/endSound.mp3" id="endSnd"></audio>
+    <script src="Assets/bootstrap/js/bootstrap.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="js/end.js"></script>
+  </body>
+</html>

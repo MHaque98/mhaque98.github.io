@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Home</title>
+    <link rel="stylesheet" href="Assets/bootstrap/css/bootstrap.min.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.js"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <link rel="stylesheet" href="css/main.css" />
+    <script
+      src="https://kit.fontawesome.com/e27a92c82d.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <div class="home-screen" data-aos="fade-out">
+      <header id="header">
+        <div class="row">
+          <div class="col-sm" style="text-align: left;"></div>
+
+          <div class="col-sm" style="text-align: right;">
+            <i class="fas fa-volume-up" id="volUp"></i>
+            <i class="fas fa-volume-mute" id="volMute"></i>
+          </div>
+        </div>
+      </header>
+      <div
+        id="home"
+        class=""
+        data-aos="fade-in"
+        data-aos-delay="1000"
+        data-aos-easing="ease-in-out"
+      >
+        <h1 class="title text-light">Ultimate Gamer Quiz</h1>
+        <h4 class="title text-light mb-5">
+          Test Your Video Game Knowledge With This Quiz!
+        </h4>
+
+        <a class="btn btn-col mx-auto" href="gamePage.html"
+          ><span>
+            Start
+          </span></a
+        >
+
+        <a
+          class="btn btn-col mx-auto mt-4"
+          data-toggle="modal"
+          data-target="#exampleModalCenter"
+          ><span>
+            HighScore
+          </span></a
+        >
+
+        <p class="mt-4">
+          <b class="text-warning">Warning</b> - Some Questions Will Include
+          Audio, So <b>Mute</b> If Needed
+        </p>
+      </div>
+      <footer id="footer">
+        <div class="row">
+          <div class="col-sm" style="text-align: left;">
+            <i class="fas fa-music pr-1"></i> - Composed By Ender Güney
+            (No-Copyright)
+          </div>
+
+          <div class="col-sm" style="text-align: right;">
+            Made By Mahmud <b>(mahmud_haque@hotmail.co.uk)</b>
+          </div>
+        </div>
+      </footer>
+    </div>
+    <!-- Modal -->
+    <div
+      class="modal fade"
+      id="exampleModalCenter"
+      tabindex="-1"
+      role="dialog"
+      aria-labelledby="exampleModalCenterTitle"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+          <div class="modal-header ">
+            <h5 class="modal-title  " id="exampleModalLongTitle">
+              Leaderboards
+            </h5>
+            <!--<button
+              type="button"
+              class="close text-light"
+              data-dismiss="modal"
+              aria-label="Close"
+            >
+              <span aria-hidden="true">&times;</span>
+            </button>-->
+          </div>
+          <div class="modal-body text-light">
+            <table>
+              <tr>
+                <th>Name</th>
+                <th>Score</th>
+              </tr>
+            </table>
+
+            <table id="highScoresList"></table>
+          </div>
+          <div class="modal-footer ">
+            <a class="btn btn-col mx-auto mt-4" data-dismiss="modal"
+              ><span>
+                Close
+              </span></a
+            >
+          </div>
+        </div>
+      </div>
+    </div>
+    <audio src="Assets/audio/NoCopyrightMusic.mp3" id="bgm"></audio>
+    <script src="Assets/bootstrap/js/bootstrap.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="js/start.js"></script>
+  </body>
+</html>

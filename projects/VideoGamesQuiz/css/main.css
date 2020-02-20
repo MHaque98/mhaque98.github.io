@@ -1,0 +1,449 @@
+@import url("https://fonts.googleapis.com/css?family=Righteous&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  background-color: #191a1d;
+  cursor: url(https://img.icons8.com/ultraviolet/30/000000/cursor.png), auto;
+  color: whitesmoke;
+}
+
+@font-face {
+  font-family: "Assassin";
+  src: url("../Assets/fonts/Assassin$.ttf") format("truetype");
+}
+
+a {
+  cursor: url(https://img.icons8.com/ultraviolet/30/000000/hand-cursor.png), auto;
+}
+
+/* +++++ HOME PAGE ++++++*/
+.home-screen {
+  width: 100vw;
+  height: 100vh;
+  background: url("../Assets/images/home-bg.png") center no-repeat;
+  background-size: cover;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  text-align: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: auto;
+}
+
+.home-screen #home {
+  background-color: rgba(23, 41, 56, 0.671);
+  padding: 16px;
+  width: 100%;
+}
+
+.home-screen h1 {
+  font-size: 5rem;
+  font-family: "Assassin";
+  letter-spacing: -1px;
+}
+
+.home-screen h4 {
+  font-size: 21px;
+  font-weight: 400;
+}
+
+.home-screen .btn {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  border-radius: 0px;
+  border: none;
+  color: #ffffff;
+  text-align: center;
+  font-size: 15px;
+  letter-spacing: 0.1em;
+  font-weight: 500;
+  padding: 10px;
+  width: 200px;
+  -webkit-transition: all 0.4s;
+  transition: all 0.4s;
+  margin: auto;
+}
+
+.home-screen .btn-col {
+  background: -webkit-gradient(linear, left top, right top, from(#215272), to(#4ca2cb)) !important;
+  background: linear-gradient(to right, #215272, #4ca2cb) !important;
+}
+
+.home-screen .btn span {
+  display: inline-block;
+  position: relative;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+.home-screen .btn span:after {
+  content: "\00bb";
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.home-screen .btn:hover span {
+  padding-right: 25px;
+}
+
+.home-screen .btn:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+
+.home-screen #header {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  padding: 1em;
+}
+
+.home-screen #header i {
+  font-size: 30px;
+  cursor: url(https://img.icons8.com/ultraviolet/30/000000/hand-cursor.png), auto;
+}
+
+.home-screen #header i:hover {
+  color: white;
+}
+
+.home-screen #header #volMute {
+  display: none;
+}
+
+.home-screen #footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  padding: 1em;
+  /* Footer height */
+}
+
+@media (max-width: 48em) {
+  .home-screen h1 {
+    font-size: 3.5rem;
+    font-family: "Assassin";
+    letter-spacing: -1px;
+  }
+  .home-screen h4 {
+    font-size: 18px;
+    font-weight: 400;
+  }
+}
+
+.modal-content {
+  background-color: rgba(23, 41, 56, 0.671);
+  padding: 1em;
+}
+
+.modal-content .modal-title {
+  font-family: "assassin";
+  font-weight: bold;
+  font-size: 2em;
+  margin: auto;
+}
+
+.modal-content table {
+  border-collapse: collapse;
+  width: 100%;
+  text-align: center;
+}
+
+.modal-content td,
+.modal-content th {
+  font-size: 17px;
+  width: 50%;
+}
+
+.modal-content th {
+  font-family: "assassin";
+  font-size: 24px;
+}
+
+.modal-content .btn {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  border-radius: 0px;
+  border: none;
+  color: #ffffff;
+  text-align: center;
+  font-size: 15px;
+  letter-spacing: 0.1em;
+  font-weight: 500;
+  padding: 10px;
+  width: 120px;
+  -webkit-transition: all 0.4s;
+  transition: all 0.4s;
+  cursor: url(https://img.icons8.com/ultraviolet/30/000000/hand-cursor.png), auto;
+  margin: auto;
+}
+
+.modal-content .btn-col {
+  background: -webkit-gradient(linear, left top, right top, from(#215272), to(#4ca2cb)) !important;
+  background: linear-gradient(to right, #215272, #4ca2cb) !important;
+}
+
+.modal-content .btn span {
+  display: inline-block;
+  position: relative;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+.modal-content .btn span:after {
+  content: "\00AB";
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  left: -20px;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.modal-content .btn:hover span {
+  padding-left: 25px;
+}
+
+.modal-content .btn:hover span:after {
+  opacity: 1;
+  left: 0;
+}
+
+/* +++++ GAME PAGE ++++++*/
+.game-page {
+  width: 100vw;
+  height: 100vh;
+  font-family: "Righteous", cursive;
+  letter-spacing: 1px;
+  background-color: #000813;
+  background-image: url("https://www.transparenttextures.com/patterns/white-wall-3-2.png");
+  /* This is mostly intended for prototyping; please download the pattern and re-host for production environments. Thank you! */
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  text-align: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: auto;
+}
+
+.game-page #hud {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.game-page .question-box {
+  height: 55vh;
+  background-color: black;
+}
+
+.game-page .question-box .q-image {
+  height: 100%;
+  -o-object-position: center;
+     object-position: center;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.game-page audio {
+  display: none;
+}
+
+.game-page video {
+  height: 100%;
+  width: 100%;
+}
+
+.game-page .choice-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  font-size: 1.1rem;
+  background-color: rgba(20, 20, 20, 0.719);
+  border: 1px #383838 solid;
+  margin-top: 15px;
+  padding: 0;
+}
+
+.game-page .choice-container:hover {
+  cursor: url(https://img.icons8.com/ultraviolet/30/000000/hand-cursor.png), auto;
+  -webkit-box-shadow: 0 0.1rem 1.2rem 0 rgba(148, 212, 245, 0.5);
+          box-shadow: 0 0.1rem 1.2rem 0 rgba(148, 212, 245, 0.5);
+  -webkit-transform: translateY(-0.1rem);
+          transform: translateY(-0.1rem);
+  -webkit-transition: -webkit-transform 150ms;
+  transition: -webkit-transform 150ms;
+  transition: transform 150ms;
+  transition: transform 150ms, -webkit-transform 150ms;
+}
+
+.game-page .choice-prefix {
+  font-weight: 500;
+  margin: 0px;
+  padding: 1rem 1.6rem;
+}
+
+.game-page #a {
+  background-color: #23a6e0;
+}
+
+.game-page #b {
+  background-color: #e51938;
+}
+
+.game-page #c {
+  background-color: #299a2d;
+}
+
+.game-page #d {
+  background-color: #e57f19;
+}
+
+.game-page .correct {
+  background-color: rgba(32, 87, 32, 0.76);
+}
+
+.game-page .incorrect {
+  background-color: rgba(113, 16, 16, 0.76);
+}
+
+.game-page .choice-text {
+  padding: 1rem;
+  width: 100%;
+}
+
+@media (max-width: 48em) {
+  .game-page h2 {
+    font-size: 1.3rem;
+  }
+  .game-page h3 {
+    font-size: 1.1rem;
+  }
+  .game-page .question-box {
+    height: 40vh;
+  }
+  .game-page .choice-container {
+    font-size: 0.9rem;
+  }
+}
+
+/* +++++ END PAGE ++++++*/
+.end-screen {
+  width: 100vw;
+  height: 100vh;
+  background: url("/Assets/images/end-bg.jpg") center no-repeat;
+  background-size: cover;
+  background-size: cover;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  text-align: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: auto;
+}
+
+.end-screen #end {
+  background-color: rgba(23, 41, 56, 0.671);
+  padding: 4em;
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  text-align: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.end-screen #end h3 {
+  font-size: 2.5rem;
+  font-family: "Assassin";
+  letter-spacing: -1px;
+}
+
+.end-screen .btn {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  border-radius: 0px;
+  border: none;
+  color: #ffffff;
+  text-align: center;
+  font-size: 15px;
+  letter-spacing: 0.1em;
+  font-weight: 500;
+  padding: 10px;
+  width: 200px;
+  -webkit-transition: all 0.4s;
+  transition: all 0.4s;
+  cursor: url(https://img.icons8.com/ultraviolet/30/000000/hand-cursor.png), auto;
+  margin: auto;
+}
+
+.end-screen .btn-col {
+  background: -webkit-gradient(linear, left top, right top, from(#215272), to(#4ca2cb)) !important;
+  background: linear-gradient(to right, #215272, #4ca2cb) !important;
+}
+
+.end-screen .btn span {
+  display: inline-block;
+  position: relative;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+.end-screen .btn span:after {
+  content: "\00AB";
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  left: -20px;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.end-screen .btn:hover span {
+  padding-left: 25px;
+}
+
+.end-screen .btn:hover span:after {
+  opacity: 1;
+  left: 0;
+}
+/*# sourceMappingURL=main.css.map */

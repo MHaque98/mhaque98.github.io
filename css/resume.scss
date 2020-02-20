@@ -1,0 +1,508 @@
+@mixin center-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+@import url("https://fonts.googleapis.com/css?family=Yantramanav&display=swap");
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+html {
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+body {
+  padding-top: 54px;
+  overflow-x: hidden;
+  margin: 0;
+  padding: 0;
+  font-family: "Yantramanav", sans-serif;
+  background-color: #ffffff;
+  background-image: url("https://www.transparenttextures.com/patterns/mirrored-squares.png");
+}
+a,
+a:hover,
+a:visited {
+  text-decoration: none !important;
+  color: inherit;
+}
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #ffffff;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: rgb(19, 19, 19);
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+@media (min-width: 992px) {
+  body {
+    padding-top: 0;
+    padding-left: 17rem;
+    overflow-x: hidden;
+  }
+}
+/*NAV*/
+#sideNav .navbar-nav .nav-item .nav-link {
+  font-weight: 500;
+  color: whitesmoke;
+  letter-spacing: 0.05rem;
+  text-transform: uppercase;
+}
+
+#sideNav .navbar-toggler:focus {
+  outline-color: #ffffff;
+}
+
+@media (min-width: 992px) {
+  #sideNav {
+    text-align: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    width: 17rem;
+    height: 100vh;
+  }
+  #sideNav .navbar-brand {
+    display: flex;
+    margin: auto auto 0;
+    padding: 0.5rem;
+  }
+  #sideNav .navbar-brand .img-profile {
+    max-width: 10rem;
+    max-height: 10rem;
+    border: 0.5rem solid rgba(194, 241, 255, 0.274);
+  }
+  #sideNav .navbar-collapse {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: start;
+    -ms-flex-align: start;
+    align-items: flex-start;
+    -webkit-box-flex: 0;
+    -ms-flex-positive: 0;
+    flex-grow: 0;
+    width: 100%;
+    margin-bottom: auto;
+  }
+  #sideNav .navbar-collapse .navbar-nav {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    width: 100%;
+  }
+  #sideNav .navbar-collapse .navbar-nav .nav-item {
+    display: block;
+  }
+  #sideNav .navbar-collapse .navbar-nav .nav-item .nav-link {
+    display: block;
+    border: whitesmoke 2px solid;
+    margin: 0.5em;
+    transition: all 0.3s;
+    &:hover {
+      color: #131313;
+      background-color: whitesmoke;
+      font-weight: 600;
+    }
+  }
+  .nav-link2 {
+    background: whitesmoke;
+    color: black !important;
+    font-weight: bold !important;
+    &:hover {
+      transform: scale(1.05);
+    }
+  }
+}
+.social-icons li {
+  margin: 0.5em;
+  display: inline;
+  i {
+    font-size: 2em;
+    transition: all 0.5s;
+    &:hover {
+      transform: scale(1.3);
+    }
+  }
+}
+.bg-primary {
+  background-color: #131313 !important;
+  background-image: url("https://www.transparenttextures.com/patterns/otis-redding.png");
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+}
+
+/* HEADER */
+.header-bg {
+  height: 100vh;
+  background: linear-gradient(#0000002d, #03030321),
+    url("../Assets/images/header-bg8.jpg");
+  background-position: center;
+  background-size: cover;
+  @include center-content();
+  color: whitesmoke;
+  .header-title {
+    font-size: 6rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+  }
+  .header-subtitle {
+    font-size: 1.4em;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    border-top: whitesmoke 2px solid;
+    border-bottom: whitesmoke 2px solid;
+  }
+}
+@media (max-width: 1024px) {
+  .header-bg {
+    .header-title {
+      font-size: 3em;
+    }
+    .header-subtitle {
+      font-size: 1em;
+    }
+  }
+}
+@media (max-width: 48em) {
+  .header-bg {
+    .header-title {
+      font-size: 2em;
+    }
+    .header-subtitle {
+      font-size: 1em;
+    }
+  }
+}
+.scroll-down {
+  opacity: 1;
+  -webkit-transition: all 0.5s ease-in 3s;
+  transition: all 0.5s ease-in 3s;
+  margin: auto;
+  display: block;
+  width: 32px;
+  height: 32px;
+  border: 2px solid #fff;
+  border-radius: 50%;
+  background-size: 14px auto;
+  z-index: 2;
+  animation: bounce 2s infinite 2s;
+  transition: all 0.2s ease-in;
+  transform: scale(1);
+  &:hover {
+    background-color: rgba(245, 245, 245, 0.274);
+  }
+}
+
+.scroll-down:before {
+  position: absolute;
+  top: calc(50% - 8px);
+  left: calc(50% - 6px);
+  transform: rotate(-45deg);
+  display: block;
+  width: 12px;
+  height: 12px;
+  content: "";
+  border: 2px solid white;
+  border-width: 0px 0 2px 2px;
+}
+
+@keyframes bounce {
+  0%,
+  100%,
+  20%,
+  50%,
+  80% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-10px);
+  }
+  60% {
+    transform: translateY(-5px);
+  }
+}
+/* ABOUT SECTIOM*/
+.about-section {
+  height: 50vh;
+  display: flex;
+  padding: 10px;
+  flex-wrap: wrap;
+  align-items: center;
+  h1 {
+    font-size: 3em;
+    font-weight: bold;
+    background-color: black;
+    color: whitesmoke;
+    display: table;
+    padding: 5px 20px;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+  }
+  p {
+    font-size: 1.2em;
+  }
+  i {
+    font-size: 10em;
+    animation: spin 10s linear infinite;
+  }
+}
+@media (max-width: 1655px) {
+  .about-section {
+    i {
+      display: none;
+    }
+  }
+}
+
+@media (max-width: 48em) {
+  .about-section {
+    padding: 30px;
+    height: 90vh;
+    h1 {
+      font-size: 2.5em;
+      font-weight: bold;
+      margin-bottom: 1em;
+    }
+    p {
+      font-size: 1em;
+    }
+    i {
+      font-size: 6em;
+      padding: 0px;
+    }
+  }
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/*Skills Section*/
+.skills-section {
+  height: 50vh;
+  background-color: #131313;
+  background-image: url("https://www.transparenttextures.com/patterns/dark-mosaic.png");
+  background-image: url("https://www.transparenttextures.com/patterns/dark-mosaic.png"),
+    linear-gradient(45deg, #131313 50%, rgb(255, 255, 255) 50%);
+  display: flex;
+
+  align-items: center;
+
+  .row {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+  }
+  h1 {
+    font-size: 3.7em;
+    font-weight: bold;
+    background-color: whitesmoke;
+    color: black;
+    display: table;
+    padding: 5px 20px;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+  }
+  .dev-icons {
+    font-size: 4rem;
+    li {
+      transition: all 0.3s;
+      &:hover {
+        transform: scale(1.3);
+      }
+    }
+  }
+}
+@media (max-width: 48em) {
+  .skills-section {
+    background-color: #131313;
+    background-image: url("https://www.transparenttextures.com/patterns/dark-mosaic.png");
+
+    h1 {
+      margin: auto;
+      font-size: 2.5em;
+      margin-bottom: 1em;
+    }
+    .dev-icons {
+      font-size: 2.5rem;
+      color: whitesmoke;
+    }
+  }
+}
+
+.projects-section {
+  .projects {
+    padding: 1em;
+    margin: auto;
+    width: 80%;
+    h1 {
+      font-size: 3em;
+      font-weight: bold;
+      background-color: black;
+      color: whitesmoke;
+      margin: auto;
+      margin-top: 0.9em;
+      margin-bottom: 0.8em;
+      display: table;
+      padding: 5px 20px;
+      box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+    }
+  }
+}
+.project-more {
+  padding: 5px 10x;
+  font-weight: bold;
+  background-color: black;
+  color: whitesmoke;
+  // box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+  border: none;
+  display: block;
+  margin: auto;
+  margin-top: 5px;
+  transition: all 0.4s;
+  &:hover {
+    transform: scale(1.2);
+  }
+}
+.project-filter-buttons {
+  text-align: center;
+}
+
+.project-filter-buttons button {
+  margin: 5px;
+  width: 100px;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+  border: none;
+  font-size: 1em;
+  font-weight: bold;
+  background-color: black;
+  color: whitesmoke;
+  cursor: pointer;
+  outline: none;
+}
+
+.project-filter-buttons button.active-filter {
+  background: whitesmoke;
+  color: black;
+}
+
+.projects-grid {
+  margin-top: 20px;
+}
+
+.project {
+  margin: 10px;
+  margin-bottom: 1em;
+}
+
+.project-image {
+  width: 100%;
+}
+.project-img {
+  height: 11em;
+}
+.pro1 {
+  background: url("../Assets/images/gamequiz.PNG") center center/cover;
+}
+.pro2 {
+  background: url("../Assets/images/tax-calculator.PNG") center center/cover;
+}
+.pro3 {
+  background: url("../Assets/images/saveocean.PNG") center center/cover;
+}
+.pro4 {
+  background: url("../Assets/images/plane.PNG") center center/cover;
+}
+.pro5 {
+  background: url("../Assets/images/memegenerator.PNG") center center/cover;
+}
+.pro6 {
+  background: url("../Assets/images/googleclone.PNG") center center/cover;
+}
+.project-title {
+  text-align: center;
+  font-size: 1.5em;
+}
+
+.project > .badges {
+  margin: 5px;
+  margin-top: 15px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.project > .badges > span {
+  border: 1px solid grey;
+  border-radius: 2px;
+  padding: 5px 10px 5px 20px;
+  position: relative;
+  margin: 5px;
+}
+
+.project > .badges > span:before {
+  position: absolute;
+  content: "°";
+  font-size: 30px;
+  top: 4px;
+  left: 5px;
+}
+
+.modal-content {
+  border-radius: 0px;
+  border: white 2px solid;
+  background-color: #131313ee;
+  background-image: url("https://www.transparenttextures.com/patterns/dark-mosaic.png");
+  color: whitesmoke;
+  h3 {
+    font-weight: bold;
+    display: table;
+    background-color: whitesmoke;
+    color: #131313;
+    padding: 5px;
+  }
+  span {
+    color: white;
+    font-size: 40px;
+  }
+  .modal-footer {
+    border-top: white 2px solid;
+  }
+  .button-modal {
+    background-color: transparent;
+    color: whitesmoke;
+    border: 2px whitesmoke solid;
+    font-weight: bold;
+    padding: 5px 10px;
+    transition: all 0.3s;
+    &:hover {
+      background-color: whitesmoke;
+      color: #131313;
+    }
+  }
+}

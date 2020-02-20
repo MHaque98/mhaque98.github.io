@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Tax Calculator</title>
+    <link rel="stylesheet" href="Assets/bootstrap/css/bootstrap.min.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.js"></script>
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.min.css"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.css"
+    />
+    <link rel="stylesheet" href="css/main.css" />
+  </head>
+  <body>
+    <header>
+      <div class="container text-center p-4 text-light">
+        <h2><b>Income Tax Calculator</b></h2>
+      </div>
+    </header>
+    <form class="input-form p-4">
+      <div class="container">
+        <dov class="row mx-auto">
+          <div class="col-sm-5">
+            <h3 class="text-light">Annual Salary(£):</h3>
+            <input
+              id="salary"
+              class="effect"
+              type="number"
+              value="0"
+              placeholder="Your Annual Salary"
+              min="0"
+              step="1000"
+            />
+            <span class="focus-bg"></span>
+          </div>
+          <div class="col-sm-5">
+            <h3 class="text-light">Annual Bonus(%):</h3>
+            <input
+              id="bonus"
+              class="effect"
+              type="number"
+              placeholder="Any Bonuses"
+              min="0"
+              max="100"
+              step="5"
+            />
+            <span class="focus-bg"></span>
+          </div>
+          <div class="col-sm-2 d-flex align-items-end">
+            <button type="submit" id="submit" class="btn btn-dark">
+              Calculate
+            </button>
+          </div>
+        </dov>
+      </div>
+    </form>
+    <main>
+      <div class="container-fluid facts-section border-bottom">
+        <div class="facts-class container">
+          <div>
+            Income Tax is a tax you pay on your income. You don't have to pay on
+            all types of income. <br />
+            <a href="https://www.gov.uk/income-tax" target="_blank"
+              >https://www.gov.uk/income-tax</a
+            >
+          </div>
+          <div>
+            For more information on <b>Income Tax rates</b>, depending where you
+            live,
+            <br />
+            <a
+              href="https://www.citizensadvice.org.uk/debt-and-money/tax/income-tax-how-much-should-you-pay/income-tax-rates/"
+              >Click Here</a
+            >
+          </div>
+          <div>
+            For a more <b>Comprehensive</b> Tax Calculator, <br />
+            <a href="https://www.moneysavingexpert.com/tax-calculator/"
+              >Visit This Page</a
+            >
+          </div>
+        </div>
+      </div>
+
+      <div class="container-fluid results-section" id="result">
+        <div class="row">
+          <div class="col-sm-6 p-5">
+            <div
+              class="result-text container text-center mb-3"
+              id="result-text"
+            >
+              <h4>-</h4>
+            </div>
+            <div class="table container">
+              <table class="table table-bordered table-hover">
+                <thead>
+                  <tr>
+                    <th></th>
+                    <th>Annual Amount</th>
+                  </tr>
+                </thead>
+                <tbody class="font-weight-bold">
+                  <tr>
+                    <td>Take Home Pay</td>
+                    <td id="take-home"></td>
+                  </tr>
+                  <tr>
+                    <td>National Insurance</td>
+                    <td id="national-insurance"></td>
+                  </tr>
+                  <tr>
+                    <td>Tax Free Allowance</td>
+                    <td id="tax-free"></td>
+                  </tr>
+                  <tr>
+                    <td>Income Tax Paid</td>
+                    <td id="tax-paid"></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+          <div class="col-sm-6 p-5 border-left">
+            <div id="chartContainer" style="height: 400px; width: 100%;"></div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <footer>Made By <a href="#">Mahmud</a></footer>
+    <script
+      type="text/javascript"
+      src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"
+    ></script>
+    <script src="Assets/canvasJS/canvasjs.min.js"></script>
+    <script src="Assets/bootstrap/js/bootstrap.min.js"></script>
+    <script src="js/app.js"></script>
+  </body>
+</html>

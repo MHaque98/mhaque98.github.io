@@ -1,0 +1,134 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+@import url("https://fonts.googleapis.com/css?family=Montserrat&display=swap");
+
+$primary: #023059;
+$secondary: #5d7ca6;
+$background: rgb(250, 254, 255);
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  height: 100vh;
+  background: $background;
+  letter-spacing: 1px;
+  font-family: "Montserrat", sans-serif;
+  background-image: url("https://www.transparenttextures.com/patterns/green-dust-and-scratches.png");
+  overflow-x: hidden;
+}
+@media (max-width: 767px) {
+  body {
+    height: max-content;
+  }
+  button {
+    margin-top: 10px;
+  }
+  h2 {
+    font-size: 27px;
+  }
+  h3 {
+    font-size: 24px;
+    padding-top: 8px;
+  }
+}
+
+span {
+  color: rgb(0, 119, 255);
+  font-weight: bold;
+  text-decoration: underline;
+}
+header {
+  background: $primary;
+  background-image: url("https://www.transparenttextures.com/patterns/brilliant.png");
+}
+
+form {
+  background: $secondary;
+  box-shadow: 0px 4px 9px -3px rgba(0, 0, 0, 0.75);
+}
+
+input {
+  font: 15px/24px "Lato", Arial, sans-serif;
+  color: rgb(27, 27, 27);
+  font-weight: bold;
+  width: 100%;
+  box-sizing: border-box;
+  letter-spacing: 1px;
+  padding: 8px 10px;
+  transition: background 0.3s;
+  &:focus {
+    background: rgb(196, 229, 255);
+  }
+}
+.effect {
+  border: 0;
+  padding: 7px 15px;
+  border: 2px solid rgb(255, 255, 255);
+  position: relative;
+  background: $background;
+}
+.btn {
+  border-radius: 0px;
+  background-color: $primary;
+  border: none;
+  color: $background;
+  font-weight: bold;
+  //text-transform: uppercase;
+  letter-spacing: 1px;
+  padding: 9px 20px;
+}
+
+.facts-section {
+  //border-bottom: 2px solid $secondary;
+  .facts-class > div {
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+    background: $secondary;
+    color: white;
+    padding: 1em;
+    width: 80%;
+    margin: 0.8em auto;
+    font-size: 20px;
+    text-align: center;
+    a {
+      color: rgb(27, 27, 27);
+      font-weight: bold;
+    }
+  }
+}
+
+.results-section {
+  .row > div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  thead {
+    background-color: $primary;
+    background-image: url("https://www.transparenttextures.com/patterns/brilliant.png");
+    color: white;
+  }
+}
+
+.slick-dots {
+  position: static;
+}
+
+footer {
+  background: $primary;
+  color: $background;
+  background-image: url("https://www.transparenttextures.com/patterns/brilliant.png");
+  padding: 0.3em;
+  font-weight: 500;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+}

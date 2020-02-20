@@ -1,0 +1,149 @@
+@import url("https://fonts.googleapis.com/css?family=Kalam|Poppins&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Rubik&display=swap");
+$original: #f5faff;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  transition: background-color 0.3s;
+  background-color: $original;
+  overflow: hidden;
+}
+
+/*NAVBAR*/
+nav {
+  margin: 3px;
+
+  li {
+    font-size: 14px;
+  }
+  .btn {
+    font-size: 14px;
+    padding: 3px 10px;
+    border-radius: 2px;
+    font-weight: 500;
+    margin-top: 3px;
+  }
+}
+
+.main {
+  padding: 7em;
+}
+.google-img {
+  display: flex;
+  justify-content: center;
+  img {
+    width: 30vh;
+  }
+}
+.input-group {
+  display: flex;
+  justify-content: center;
+  background-color: $original;
+  max-width: 580px;
+  &:focus-within {
+    box-shadow: 0 1px 6px 0 rgba(32, 33, 36, 0.28);
+    border-color: rgba(223, 225, 229, 0);
+  }
+  &:hover {
+    box-shadow: 0 1px 6px 0 rgba(32, 33, 36, 0.28);
+    border-color: rgba(223, 225, 229, 0);
+  }
+
+  .form-control:focus {
+    box-shadow: none;
+  }
+}
+.search-btns {
+  display: flex;
+  justify-content: center;
+  button {
+    background-image: -webkit-linear-gradient(top, #f2f6fa, #eaedf0);
+    background-color: #f2f2f2;
+    border: 1px solid #f2f2f2;
+    border-radius: 4px;
+    color: #5f6368;
+    font-size: 14px;
+    margin: 10px;
+  }
+}
+.footers {
+  background: -webkit-linear-gradient(top, #f2f6fa, #eaedf0);
+
+  background-color: #f2f2f2;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  color: gray;
+  a {
+    color: black;
+  }
+}
+.footer1 {
+  font-size: 15px;
+  border-top: 1px solid #e4e4e4;
+
+  li {
+    display: inline;
+    font-size: 14px;
+  }
+}
+.dropdown-menu {
+  text-align: center;
+  width: 20em;
+  background-color: $original;
+  font-size: 15px;
+  font-weight: bolder;
+  border: 1px solid #e4e4e4;
+
+  .col-sm-6 {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    cursor: pointer;
+    transition: all 0.2s;
+    border-radius: 3px;
+    &:hover {
+      background-color: rgb(224, 244, 253);
+    }
+  }
+  .block {
+    height: 25px;
+    width: 95%;
+    border-radius: 3px;
+  }
+}
+@media (max-width: 576px) {
+  .dropdown-menu {
+    width: 10em;
+  }
+}
+@media (min-width: 992px) {
+  .animate {
+    animation-duration: 0.3s;
+    animation-fill-mode: both;
+  }
+}
+
+@keyframes slideIn {
+  0% {
+    transform: translateY(0rem);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0.2rem);
+    opacity: 1;
+  }
+  0% {
+    transform: translateY(0rem);
+    opacity: 0;
+  }
+}
+
+.slideIn {
+  -webkit-animation-name: slideIn;
+  animation-name: slideIn;
+}

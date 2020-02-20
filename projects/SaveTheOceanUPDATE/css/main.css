@@ -1,0 +1,505 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  scroll-behavior: smooth;
+}
+html,
+body {
+  width: 100%;
+  margin: 0px;
+  padding: 0px;
+  overflow-x: hidden;
+}
+
+@import url("https://fonts.googleapis.com/css?family=Open+Sans&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Rubik&display=swap");
+@font-face {
+  font-family: "MyWebFont";
+  src: url("myfont.woff") format("woff"),
+    /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+      url("../Assets/fonts/NorthDjakartaDemo.ttf") format("truetype"); /* Chrome 4+, Firefox 3.5, Opera 10+, Safari 3—5 */
+}
+::-moz-selection {
+  /* Code for Firefox */
+  color: #3f83d1;
+  background: yellow;
+}
+
+::selection {
+  color: #3f83d1;
+  background: yellow;
+}
+
+body {
+  background-color: #fafdff;
+  font-family: "Open Sans", sans-serif;
+}
+p {
+  color: #6b7177;
+  font-size: 16px;
+  margin-top: 0px;
+}
+
+a {
+  color: #000;
+}
+a:hover {
+  color: white;
+}
+
+/* header */
+
+.header {
+  background-color: rgba(14, 14, 14, 0.986);
+  transition: background-color 1s ease 0s;
+  box-shadow: 1px 1px 4px 0 rgba(0, 0, 0, 0.1);
+  position: fixed;
+  width: 100%;
+  z-index: 3;
+  padding: 0;
+}
+.transparent-nav {
+  background-color: rgba(14, 14, 14, 0.801);
+  transition: background-color 1s ease 0s;
+}
+.header ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  overflow: hidden;
+
+  padding: 1vh 0;
+}
+
+.header li a {
+  display: block;
+  padding: 20px 20px;
+  border-right: 1px solid #535353;
+  text-decoration: none;
+  color: rgb(221, 221, 221);
+  font-weight: 600;
+  letter-spacing: 1px;
+  transition: background-color 0.3s;
+}
+
+.header li a:hover,
+.header .menu-btn:hover {
+  background-color: #024788b2;
+  color: rgb(255, 255, 255);
+}
+
+.header .logo {
+  display: block;
+  float: left;
+  font-size: 1.5em;
+  padding: 10px 20px;
+  text-decoration: none;
+}
+.header .logo img {
+  width: 7em;
+}
+@media (max-width: 48em) {
+  .header .logo img {
+    width: 6em;
+  }
+  .header ul {
+    padding: 0vh 0;
+  }
+}
+
+/* menu */
+
+.header .menu {
+  clear: both;
+  max-height: 0px;
+  transition: max-height 0.2s ease-out;
+}
+
+/* menu icon */
+
+.header .menu-icon {
+  cursor: pointer;
+  display: inline-block;
+  float: right;
+  padding: 28px 20px;
+  position: relative;
+  user-select: none;
+}
+
+.header .menu-icon .navicon {
+  background: #333;
+  display: block;
+  height: 2px;
+  position: relative;
+  transition: background 0.2s ease-out;
+  width: 18px;
+}
+
+.header .menu-icon .navicon:before,
+.header .menu-icon .navicon:after {
+  background: #333;
+  content: "";
+  display: block;
+  height: 100%;
+  position: absolute;
+  transition: all 0.2s ease-out;
+  width: 100%;
+}
+
+.header .menu-icon .navicon:before {
+  top: 5px;
+}
+
+.header .menu-icon .navicon:after {
+  top: -5px;
+}
+@media (max-width: 48em) {
+  .header .menu-icon {
+    margin-top: 10px;
+    padding: 28px 20px;
+  }
+}
+/* menu btn */
+
+.header .menu-btn {
+  display: none;
+}
+
+.header .menu-btn:checked ~ .menu {
+  max-height: 270px;
+}
+
+.header .menu-btn:checked ~ .menu-icon .navicon {
+  background: transparent;
+}
+
+.header .menu-btn:checked ~ .menu-icon .navicon:before {
+  transform: rotate(-45deg);
+}
+
+.header .menu-btn:checked ~ .menu-icon .navicon:after {
+  transform: rotate(45deg);
+}
+
+.header .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:before,
+.header .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:after {
+  top: 0;
+}
+
+/* 48em = 768px */
+
+@media (min-width: 48em) {
+  .header li {
+    float: left;
+  }
+  .header li a {
+    padding: 20px 30px;
+  }
+  .header .menu {
+    clear: none;
+    float: right;
+    max-height: none;
+  }
+  .header .menu-icon {
+    display: none;
+  }
+}
+
+/*NAVBAR END*/
+
+/*JUMBOTRON*/
+.jumbotron {
+  background: linear-gradient(#0000000e, #00000000),
+    url("../Assets/images/jumbotron3.jpg") no-repeat center;
+  /*background: url(/Assets/jumbotron3.jpg);*/
+  background-attachment: fixed;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 100vh;
+  display: flex;
+}
+.jumbo-text {
+  display: inline-flex;
+  flex-direction: column;
+  margin: auto;
+  padding-bottom: 15em;
+}
+.jumbo-text h1 {
+  font-family: "MyWebFont";
+  font-weight: bold;
+  font-size: 6em;
+  color: #f7f7f7;
+}
+.jumbotron p {
+  font-style: italic;
+  color: #f7f7f7;
+  font-size: 25px;
+}
+@media (max-width: 48em) {
+  .jumbotron {
+    height: 100vh;
+    position: relative;
+    background-attachment: scroll;
+  }
+  .jumbo-text {
+    padding: 1em;
+    position: absolute;
+    bottom: 0;
+  }
+  .jumbo-text h1 {
+    font-weight: bold;
+    font-size: 3em;
+    color: #f7f7f7;
+  }
+}
+/*JUMBOTRON END*/
+
+/*Section One Start*/
+.mini-heading {
+  font-size: 15px;
+  color: #3f83d1;
+  font-weight: 600;
+}
+.sect-one-img img {
+  /*background: url(/Assets/images/oceanpollution.jpg);
+  background-size: cover;*/
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+}
+.sect-one-text {
+}
+/*Section One End*/
+
+/* Facts Section */
+.parralax1 {
+  background: url(../Assets/images/parralax2.jpeg);
+  background-size: cover;
+  background-attachment: fixed;
+  height: 10em;
+}
+.facts {
+}
+.item {
+  display: flex;
+  flex-direction: column;
+  height: 13em;
+  border-radius: 0px;
+}
+
+.item .fact-wrap {
+  margin: auto;
+  padding: 1em;
+}
+.item1 {
+  background-color: #ffffff;
+  background-image: url("https://www.transparenttextures.com/patterns/concrete-wall-2.png");
+  /* This is mostly intended for prototyping; please download the pattern and re-host for production environments. Thank you! */
+  border: rgb(255, 238, 0) 1px solid;
+  margin: auto;
+  color: #0f0f0f;
+}
+.item1 {
+  color: #181818;
+  font-weight: 700;
+}
+.item2 {
+  background-color: #3a3a3a;
+
+  background-image: url("https://www.transparenttextures.com/patterns/concrete-wall-2.png");
+  /* This is mostly intended for prototyping; please download the pattern and re-host for production environments. Thank you! */
+  border: rgb(0, 174, 255) 1px solid;
+
+  margin: auto;
+  color: whitesmoke;
+}
+.item2 {
+  color: rgb(255, 255, 255);
+  font-weight: 700;
+}
+/*Facts Section END */
+
+/*Section 2 start*/
+.sect-2-img {
+  background: url(../Assets/images/underwater.jpg);
+  background-size: cover;
+}
+
+/*******************************
+* ACCORDION WITH TOGGLE ICONS
+* Does not work properly if "in" is added after "collapse".
+*******************************/
+.panel-group .panel {
+  border-radius: 0;
+  box-shadow: none;
+}
+.panel-body {
+  padding: 15px;
+}
+.panel-default > .panel-heading {
+  padding: 0;
+  border-radius: 0;
+
+  background-color: #3a3a3a;
+  border-color: #000000;
+}
+
+.panel-title {
+  font-size: 18px;
+}
+
+.panel-title > a {
+  display: block;
+  padding: 15px;
+  text-decoration: none;
+  color: whitesmoke;
+}
+
+.more-less {
+  float: right;
+  color: white;
+}
+
+.panel-default > .panel-heading + .panel-collapse > .panel-body {
+  border-top-color: #eeeeee;
+}
+
+/*SECTION 2 END*/
+
+/*IMAGE GALLERY START*/
+.img-gallery {
+}
+.flex-column {
+  max-width: 465px;
+}
+.image-box {
+  overflow: hidden;
+}
+.image-box img {
+  transition: all 0.6s;
+  transform: scale(1);
+}
+.image-box:hover img {
+  transform: scale(1.2);
+}
+/*IMAGE GALERRY END*/
+
+/*SECTION 3 START*/
+.charities {
+}
+
+.charity-list {
+  padding: 5px;
+  transition: box-shadow 0.3s;
+  background-color: rgb(255, 255, 255);
+  margin-bottom: 15px;
+}
+.charity-list:hover {
+  -webkit-box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19),
+    0 6px 6px rgba(0, 0, 0, 0.23);
+  -moz-box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19),
+    0 6px 6px rgba(0, 0, 0, 0.23);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+}
+.charity-list button {
+  display: block;
+  margin: auto;
+  margin-bottom: 10px;
+}
+.charity-logo {
+  display: block;
+  margin: auto;
+  height: 100px;
+}
+/* GENERAL BUTTON STYLING */
+.example_f {
+  border-radius: 0px;
+
+  border: none;
+  color: #ffffff;
+  text-align: center;
+
+  font-size: 15px;
+  letter-spacing: 0.1em;
+  padding: 10px;
+  width: 200px;
+  transition: all 0.4s;
+  cursor: pointer;
+  margin: auto;
+}
+.btn-green {
+  background: linear-gradient(to right, #67b26b, #4ca2cb) !important;
+}
+.btn-black {
+  background: linear-gradient(to right, #383838, #141414) !important;
+}
+.btn-red {
+  background: linear-gradient(to right, #ff5959, #cc0000) !important;
+}
+.example_f span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.4s;
+}
+.example_f span:after {
+  content: "\00bb";
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+.example_f:hover span {
+  padding-right: 25px;
+}
+.example_f:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+/*SECTION 3 END */
+
+/*FOOTER START*/
+.footer {
+  border-top: solid #3f83d1;
+  border-width: 15px;
+  background-color: rgba(14, 14, 14, 0.986);
+
+  height: 100%;
+  width: 100%;
+  padding: 40px;
+}
+.footer-logo {
+  width: 10em;
+}
+.text {
+  color: #dddddd;
+
+  font-size: 60px;
+  text-align: center;
+  margin-top: 50px;
+}
+
+.text2 {
+  color: #dbdbdb;
+
+  font-size: 20px;
+  text-align: center;
+  margin-top: -50px;
+}
+
+.text3 {
+  color: #424242;
+
+  font-size: 20px;
+  text-align: center;
+  margin-top: -20px;
+  float: center;
+}
+
+#page-footer {
+  display: none !important;
+}
+/*FOOTER END*/

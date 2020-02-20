@@ -1,0 +1,412 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: rgb(251, 253, 255);
+
+}
+
+.main-body {
+    position: relative;
+    background: #ffffff;
+    background-image: url("https://www.transparenttextures.com/patterns/climpek.png");
+    /* fallback */
+    background-image: url("https://www.transparenttextures.com/patterns/climpek.png"), linear-gradient(45deg, #ffffff 50%, #273540 50%);
+    /* W3C */
+    top: 1.2em;
+    border-radius: 15px;
+    padding: 35px;
+    -webkit-box-shadow: 0px 0px 9px 0px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 0px 0px 9px 0px rgba(0, 0, 0, 0.75);
+    box-shadow: 0px 0px 9px 0px rgba(0, 0, 0, 0.75);
+    min-height: 884px;
+    */
+}
+
+#search {
+    width: 45vh;
+    height: 45px;
+    border-radius: 2px;
+    background-color: #ffffff;
+    border: solid 1px #ffffff;
+    text-align: center;
+    letter-spacing: 0.7px;
+    font-size: 18px;
+    font-weight: 500;
+    margin: auto;
+    -webkit-box-shadow: 0px 0px 9px 0px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 0px 0px 9px 0px rgba(0, 0, 0, 0.75);
+    box-shadow: 0px 0px 9px 0px rgba(65, 65, 65, 0.75);
+}
+
+#alert {
+    height: 25px;
+    margin-bottom: 5px;
+    font-size: 18px;
+    color: #ff2222;
+    font-weight: 500;
+    text-shadow: 0px 0px 7px rgb(47, 47, 47);
+}
+
+/*BUTTON CSS*/
+.glow-on-hover {
+    color: white;
+    font-size: 20px;
+    font-weight: 600;
+    padding: 10px 45px;
+    margin: 20px;
+    outline: none;
+    color: #f7f7f7;
+     !important background-color: #ffffff;
+    cursor: pointer;
+    position: relative;
+    z-index: 0;
+    border-radius: 3px;
+}
+
+.b1 {
+    border: 1px #0a5084 solid;
+}
+
+.b1:before {
+    background: linear-gradient(45deg, #00ceff, #0058ff, #9bf0ff, #0076ff, #0058ff, #adf9ff, #0058ff, #00e2ff, #feffff);
+    position: absolute;
+}
+
+.b1:after {
+    background: -moz-linear-gradient(top, rgba(59, 103, 158, 1) 0%, rgba(32, 124, 202, 1) 45%, rgba(32, 124, 202, 1) 45%, rgba(125, 185, 232, 1) 100%);
+    /* FF3.6-15 */
+    background: -webkit-linear-gradient(top, rgba(59, 103, 158, 1) 0%, rgba(32, 124, 202, 1) 45%, rgba(32, 124, 202, 1) 45%, rgba(125, 185, 232, 1) 100%);
+    /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom, rgba(59, 103, 158, 1) 0%, rgba(32, 124, 202, 1) 45%, rgba(32, 124, 202, 1) 45%, rgba(125, 185, 232, 1) 100%);
+    /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+}
+
+.b2 {
+    border: 1px #c99216 solid;
+}
+
+.b2:hover {
+    color: white;
+     !important
+}
+
+.b2:before {
+    background: linear-gradient(45deg, #ff6c00, #ffffff, #ffeb00, #ff7600, #e2f29f, #ffba00, #ffeb00, #ffffff, #ff8000);
+    position: absolute;
+}
+
+.b2:after {
+    background: -moz-linear-gradient(top, rgba(249, 198, 103, 1) 0%, rgba(247, 150, 33, 1) 51%);
+    /* FF3.6-15 */
+    background: -webkit-linear-gradient(top, rgba(249, 198, 103, 1) 0%, rgba(247, 150, 33, 1) 51%);
+    /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom, rgba(249, 198, 103, 1) 0%, rgba(247, 150, 33, 1) 51%);
+    /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+}
+
+.glow-on-hover:before {
+    content: '';
+    top: -2px;
+    left: -2px;
+    background-size: 400%;
+    z-index: -1;
+    filter: blur(5px);
+    width: calc(100% + 4px);
+    height: calc(100% + 4px);
+    animation: glowing 20s linear infinite;
+    opacity: 0;
+    transition: opacity .3s ease-in-out;
+    border-radius: 3px;
+}
+
+.glow-on-hover:active {
+    color: #ffffff
+}
+
+.glow-on-hover:active:after {
+    background: transparent;
+}
+
+.glow-on-hover:hover:before {
+    opacity: 1;
+}
+
+.glow-on-hover:after {
+    z-index: -1;
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    /*background: #013ba8;*/
+    left: 0;
+    top: 0;
+    border-radius: 3px;
+}
+
+@keyframes glowing {
+    0% {
+        background-position: 0 0;
+    }
+
+    50% {
+        background-position: 400% 0;
+    }
+
+    100% {
+        background-position: 0 0;
+    }
+}
+
+.report-btn {
+    margin-top: 5px;
+    color: white;
+    padding: 1px 10px;
+}
+
+/*+++++++++BUTTON CSS END++++++++++++*/
+
+/*DATA TABLE CSS*/
+table {
+    padding: 1px;
+    -webkit-box-shadow: 0px 0px 9px 0px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 0px 0px 9px 0px rgba(0, 0, 0, 0.75);
+    box-shadow: 0px 0px 9px 0px rgba(0, 0, 0, 0.75);
+}
+
+th {
+    font-weight: 600;
+}
+
+td {
+    width: 150px;
+    font-size: 14px;
+    font-weight: 500;
+    height: 3.5em;
+    margin: 0;
+}
+
+.status {
+    -webkit-animation: pulsate 2s ease-out;
+    -webkit-animation-iteration-count: infinite;
+    opacity: 0.5;
+    color: #0dbeff;
+}
+
+@-webkit-keyframes pulsate {
+    0% {
+        opacity: 0.1;
+    }
+
+    50% {
+        opacity: 1.0;
+    }
+
+    100% {
+        opacity: 0.1;
+    }
+}
+
+/*DATA TABLE CSS END*/
+
+/*Runways CSS */
+.row {
+    border-bottom: 1px white solid;
+    border-top: 1px white solid;
+    margin: px 0px;
+    background-color: #353b43
+}
+
+.runway-display {
+    -webkit-box-shadow: 0px 0px 9px 0px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 0px 0px 9px 0px rgba(0, 0, 0, 0.75);
+    box-shadow: 0px 0px 9px 0px rgba(0, 0, 0, 0.75);
+}
+
+.runway-text {
+    font-size: 22px;
+    color: aliceblue;
+}
+
+.col-sm-8 {
+    border-left: 2px white solid
+}
+
+span {
+    text-align: center;
+    position: relative;
+    color: aliceblue;
+    left: 40%;
+    bottom: 15%;
+    transform: translateX(-50%) translateY(50%);
+    font-weight: 500;
+    letter-spacing: 0.4px;
+}
+
+.orange {
+    color: #ffab0d;
+}
+
+.fas {
+    font-size: 31px;
+    color: #58db30;
+    z-index: 420;
+}
+
+.plane {
+    color: #0dbeff;
+    position: relative;
+    -webkit-animation: mymove 2s infinite;
+    /* Safari 4.0 - 8.0 */
+    animation: mymove 2s infinite;
+}
+
+.plane0 {
+    color: #ffab0d;
+    position: relative;
+    transform: rotate(180deg);
+    -webkit-animation: mymove1 2s infinite;
+    /* Safari 4.0 - 8.0 */
+    animation: mymove1 2s infinite;
+}
+
+/* Safari 4.0 - 8.0 */
+@-webkit-keyframes mymove {
+    from {
+        left: 0px;
+    }
+
+    to {
+        left: 95%;
+    }
+}
+
+@keyframes mymove {
+    from {
+        left: 0px;
+    }
+
+    to {
+        left: 95%;
+    }
+}
+
+@-webkit-keyframes mymove1 {
+    from {
+        left: 95%;
+    }
+
+    to {
+        left: 0%;
+    }
+}
+
+@keyframes mymove1 {
+    from {
+        left: 95%;
+        ;
+    }
+
+    to {
+        left: 0%;
+    }
+}
+
+/*-----RUNWAYS CSS END-----*/
+#clockdate {
+    position: absolute;
+    left: 80%;
+    color: aliceblue;
+    font-weight: 600;
+    text-align: center;
+    font-size: 16px;
+}
+
+/*PRELOADING------------ */
+#overlayer {
+    border-radius: 15px;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: 1;
+    background: #152029;
+
+
+    bottom: .5px;
+    right: .5px;
+    background-image: url("https://www.transparenttextures.com/patterns/climpek.png"), linear-gradient(to bottom, #152029 0%, #314054 50%, #152029 100%);
+    /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+}
+
+.loader {
+    display: inline-block;
+    width: 45px;
+    height: 45px;
+    position: absolute;
+    top: 45%;
+    left: 47%;
+    transform: translateX(-50%) translateY(50%);
+    z-index: 3;
+    border: 2.5px solid #Fff;
+
+    animation: loader 2s infinite ease;
+}
+
+.loader-inner {
+    position: absolute;
+    bottom: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(50%);
+    vertical-align: top;
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    background-color: #fff;
+    animation: loader-inner 2s infinite ease-in;
+}
+
+@keyframes loader {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    25% {
+        transform: rotate(180deg);
+    }
+
+    50% {
+        transform: rotate(180deg);
+    }
+
+    75% {
+        transform: rotate(360deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes loader-inner {
+    0% {
+        height: 0%;
+    }
+
+    25% {
+        height: 0%;
+    }
+
+    50% {
+        height: 100%;
+    }
+
+    75% {
+        height: 100%;
+    }
+
+    100% {
+        height: 0%;
+    }
