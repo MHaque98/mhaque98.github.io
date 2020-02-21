@@ -281,6 +281,7 @@ a:visited {
     h1 {
       font-size: 2.5em;
       font-weight: bold;
+      margin: auto;
       margin-bottom: 1em;
     }
     p {
@@ -503,6 +504,16 @@ a:visited {
     &:hover {
       background-color: whitesmoke;
       color: #131313;
+    }
+  }
+}
+
+@media (max-width: 48em) {
+  .projects-section {
+    .projects {
+      h1 {
+        font-size: 2.3em;
+      }
     }
   }
 }
