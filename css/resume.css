@@ -14,7 +14,6 @@ html {
 }
 
 body {
-  padding-top: 54px;
   overflow-x: hidden;
   margin: 0;
   padding: 0;
@@ -96,7 +95,7 @@ a:visited {
   #sideNav .navbar-brand .img-profile {
     max-width: 10rem;
     max-height: 10rem;
-    border: 0.5rem solid rgba(194, 241, 255, 0.274);
+    border: 0.5rem solid whitesmoke;
   }
   #sideNav .navbar-collapse {
     display: -webkit-box;
@@ -315,6 +314,7 @@ a:visited {
   color: whitesmoke;
   display: table;
   padding: 5px 20px;
+  margin-bottom: 20px;
   -webkit-box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
           box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
 }
@@ -338,7 +338,9 @@ a:visited {
 @media (max-width: 48em) {
   .about-section {
     padding: 30px;
-    height: 90vh;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
   }
   .about-section h1 {
     font-size: 2.5em;
@@ -453,7 +455,6 @@ a:visited {
 .projects-section .projects {
   padding: 1em;
   margin: auto;
-  width: 80%;
 }
 
 .projects-section .projects h1 {
@@ -623,9 +624,65 @@ a:visited {
   color: #131313;
 }
 
-@media (max-width: 48em) {
-  .projects-section .projects h1 {
-    font-size: 2.3em;
-  }
+/*CONTACT SECTION*/
+.contact-section {
+  background-color: #131313;
+  background-image: url("https://www.transparenttextures.com/patterns/dark-mosaic.png");
+  padding: 1em;
+  padding-top: 2em;
+  padding-bottom: 2em;
+}
+
+.contact-section .contact .icon {
+  color: whitesmoke;
+  font-size: 2em;
+  text-align: center;
+}
+
+.contact-section .contact .icon i {
+  -webkit-animation: spin 5s linear infinite;
+          animation: spin 5s linear infinite;
+}
+
+.contact-section .contact h1 {
+  font-weight: bold;
+  background-color: whitesmoke;
+  margin: auto;
+  margin-top: 0.9em;
+  color: black;
+  display: table;
+  padding: 5px 20px;
+  -webkit-box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+          box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+}
+
+.contact-section .contact .contact-form .form-group .form-control {
+  background: transparent;
+  color: whitesmoke;
+  border: 0;
+  border-radius: 0;
+  border-bottom: 2px whitesmoke solid;
+}
+
+.contact-section .contact .contact-form .form-group .form-control:focus {
+  outline: none !important;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+
+.contact-section .contact .contact-form .button-submit {
+  display: block;
+  margin: auto;
+  padding: 5px 15px;
+  background-color: whitesmoke;
+  font-weight: bold;
+  border: none;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+.contact-section .contact .contact-form .button-submit:hover {
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
 }
 /*# sourceMappingURL=resume.css.map */
