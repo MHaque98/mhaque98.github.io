@@ -32,7 +32,7 @@ saveScore = e => {
   console.log(highScores);
 
   localStorage.setItem("highScores", JSON.stringify(highScores));
-  window.location.assign("index.html");
+  window.location.assign("../index.html");
 };
 
 document.getElementById("save").addEventListener("click", saveScore);
